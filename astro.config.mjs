@@ -3,6 +3,7 @@ import vercel from "@astrojs/vercel/serverless";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 
+//vercell added
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-supabase-auth.vercel.app",
