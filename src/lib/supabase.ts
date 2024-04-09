@@ -9,7 +9,6 @@ export const supabase = createClient(
       // autoRefreshToken: false,
       // detectSessionInUrl: false,
       // persistSession: true,
-      //comente esta mierda y lo puse local
     },
   },
 );
