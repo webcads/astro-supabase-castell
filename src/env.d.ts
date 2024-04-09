@@ -1,9 +1,9 @@
-// /// <reference types="astro/client" />
-// declare namespace App {
-//   interface Locals {
-//     email: string;
-//   }
-// }
+/// <reference types="astro/client" />
+declare namespace App {
+  interface Locals {
+    email: string;
+  }
+}
 
 interface ImportMetaEnv {
   readonly SUPABASE_URL: string
