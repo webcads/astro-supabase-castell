@@ -40,13 +40,13 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
 
   const { access_token, refresh_token } = data.session;
   cookies.set("sb-access-token", access_token, {
-    sameSite: "strict",
-    path: "/",
+    // sameSite: "strict",
+    // path: "/",
     secure: true,
   });
   cookies.set("sb-refresh-token", refresh_token, {
-    sameSite: "strict",
-    path: "/",
+    // sameSite: "strict",
+    // path: "/",
     secure: true,
   });
 
