@@ -1,0 +1,36 @@
+---
+import LogoTipo from "../icons/LogoTipo.astro";
+import imagenPC from '../../imgs/portada.png';
+import { Image } from "astro:assets";
+interface Props {
+  imgMobil:string
+  imgPc?:string
+
+} const{imgMobil,imgPc} = Astro.props;
+---
+
+<header
+  id="header-hero"
+  class="relative  h-fit  flex flex-col section justify-start align-middle text-center rounderd-xl"
+  style="padding: 0 !important;"
+>  
+  <div class="hidden md:block">
+    <img
+      src= {imgPc}
+      width={1600}
+      height={800}
+      alt="Imagen Pc" 
+      style="    width: -webkit-fill-available;
+      "
+    />
+  </div>  
+
+  <div class="block md:hidden">
+    <Image
+      src={imgMobil}
+      width={500}
+      height={800}
+      alt="Imagen Mobil"
+    />
+  </div>
+</header>

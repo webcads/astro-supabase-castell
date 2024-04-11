@@ -1,0 +1,48 @@
+---
+import Productos1 from "../components/productos/Productos1.astro"
+import Item from "../components/productos/Item.astro"
+
+
+interface Props {
+    arrayProductos?: string[];
+    sectionTitle?: string;
+}
+const {arrayProductos, sectionTitle} = Astro.props;
+// console.log("CATALOGO DE PRODUCTOS: " + JSON.stringify(arrayProductos));
+---
+<!-- {Object.keys(arrayProductos).map((productoArray) => (    
+    <Productos1  sectionTitle={sectionTitle} productos={arrayProductos[productoArray]} />
+))} -->
+<!-- {arrayProductos.map((producto) => (
+    <Productos1  
+        key={producto.id} // Asegúrate de agregar una clave única para cada elemento
+        sectionTitle={producto.title} 
+        productos={[producto]} // Pasa cada producto como un array de un solo elemento
+    />
+))} -->
+
+<section
+    class="flex section flex-col  items-center justify-center"
+    style="padding: 5.6vw !important;"
+>
+<h5 class="uppercase m-2 text-center w-full bg-secondary dark:bg-primary text-primary dark:text-secondary">{sectionTitle}</h5>
+<div class="flex-row md:flex-row flex-wrap flex justify-between">
+{arrayProductos.map((item,index) => (
+    <Item             
+            key={index} // Asegúrate de agregar una clave única para cada elemento
+            id={item.id}
+            imgMobil={item.imgProducto}               
+            title={item.title} 
+            subtitle={item.subtitle} 
+            price={item.precio}
+            arrayColor={item.colores}
+            url_imagen={item.url_imagen}
+         
+    />
+        
+))}
+</div> 
+</section>
+
+
+ <!-- arrayColor={producto.arrayColor} -->

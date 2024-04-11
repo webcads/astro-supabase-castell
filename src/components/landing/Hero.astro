@@ -1,0 +1,55 @@
+---
+import LogoCAD from "../logo-CAD.astro";
+import { Image } from "astro:assets";
+import pathImageBranding from "../../imgs/branding.svg";
+import pathImgLogotipo from "../../imgs/logotipo.svg";
+import pathImgAsistant from "../../imgs/asistant.png";
+import Branding from "../resources/Branding.astro";
+import LogoTipo from "../resources/LogoTipo.astro";
+import CAD_Asistant from "../resources/CAD_Asistant.astro";
+---
+
+<style>
+    button {
+        /* background: #0062a7; */
+        transition: all ease 0.3s;
+    }
+    @keyframes floating {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .floating-spacecraft {
+        animation: floating 3s ease-in-out infinite;
+    }
+</style>
+
+<header
+    id="hero"
+    class="min-h-screen flex flex-col justify-start text-center rounderd-xl md:min-h-fit"
+>
+    <div class="md:hidden">
+        <Image
+            src=""
+            width={500}
+            height={500}
+            alt="image  movil"
+        />
+    </div>
+
+    <div class="hidden md:block ">
+        <Image
+            src=""
+            width={1600}
+            height={1024}
+            alt="image  movil"
+        />
+    </div>
+</header>

@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/layout.astro";
+import { supabase } from "../lib/supabase";
+import Carnet from "../components/resources/Carnet.astro";
+import { getUserDataByEmail } from "../config/servicesSupabase/getUserDataByEmail"
+
+const { cookies, redirect } = Astro;
+
+const accessToken = cookies.get("sb-access-token");
+const refreshToken = cookies.get("sb-refresh-token");
+
+if (!accessToken || !refreshToken) {
+  return redirect("/api/signin");
+}
+
+const { data, error } = await supabase.auth.setSession({
+  refresh_token: refreshToken.value,
+  access_token: accessToken.value,
+});
+
+if (error) {
+  cookies.delete("sb-access-token", {
+    path: "/",
+  });
+  cookies.delete("sb-refresh-token", {
+    path: "/",
+  });
+
+  return redirect("/api/");
+}
+
+const email = data?.user?.email;
+
+const usuarioPromise = getUserDataByEmail(email);
+const usuario = await usuarioPromise; // Esperar a que se resuelva la promesa
+console.log("DATOS USARIO FROM SUPABASE", usuario);
+---
+
+
+
+<Layout title="UniKit" subtitle="Carnet Digital Unicauca">
+  <section
+    class="section flex flex-col gap-5 justify-between items-center"
+    style="padding: 5.6vw"
+    transition:name="homologacion"
+  >
+  
+    <h1 class="text-secondary dark:text-white">Carnet Digital Unicauca</h1>
+    <!-- <h2>{email}</h2> -->
+   
+            <Carnet foto={usuario.picture}
+             nombres={usuario.nombres} 
+             apellidos={usuario.apellidos} 
+             identificacion="0123456789" tipo_sangre="O+" rol="Estudiante" ></Carnet>                   
+
+  </section>
+</Layout>
+
