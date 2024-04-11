@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/* Add the Google Fonts link here */
+
+html {
+  font-family: 'Roboto', sans-serif;
+  background: white;
+  color: #474747;
+  transition: all ease-in-out 0.3s;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+button {
+ font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p, a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+html a {
+  text-decoration: none;
+  color: gray;
+}
+
+html a:hover {
+  text-decoration: none;
+  color: gray;
+}
+
+h1, h2, h3, h4, h5, h6, span, a {
+ font-family: 'Roboto', sans-serif;
+}
+
+
+/* Estilos generales para todos los dispositivos */
+.section {
+ 
+}
+
+
+/* Media query para dispositivos de escritorio (PC) */
+@media (min-width: 768px) {
+  .section {
+    
+  }
+  .section_broad{
+    padding-top: 80px;
+    padding-left: 5.6vw;
+    padding-right: 5.6vw;
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .section {
+    /* Estilos específicos para dispositivos móviles */
+   
+  }
+}
+
+.dark .section {
+  background: #0e1d34 !important;
+  background: radial-gradient(#003d70, #111827) !important;
+}
+
+.section:not(.dark) {
+  background: radial-gradient(#ffffff30, #c6c6c6);
+}

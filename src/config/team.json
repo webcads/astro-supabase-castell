@@ -1,0 +1,25 @@
+{
+    "team":[
+        {
+        "image": "/team/castell.svg",
+        "name": "Ivan E. Castillo",
+        "carrer": "Ingeniero de Sistemas"             
+        },
+        {
+        "image": "/team/core.svg",
+        "name": "@core_banner",
+        "carrer": "Diseñador Grafico"       
+
+        },
+        {
+        "image": "/team/member3.svg",
+        "name": "Mónica Castillo",
+        "carrer": "Diseñadora Grafica"       
+        },
+        {
+        "image": "/team/member4.svg",
+        "name": "Force Staff",
+        "carrer": "Arte Digital"        
+        }
+        ]
+}

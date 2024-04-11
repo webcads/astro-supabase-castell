@@ -1,0 +1,29 @@
+{
+    "services":[
+        {
+        "title": "Diseño de",
+        "link": "/market_design/",
+            "title_under": " Marketing",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores saepe laborum et, tempore ut dolorem nulla nesciunt necessitatibus voluptatibus fuga, nobis eveniet placeat eligendi eos earum ipsum repellendus ullam facere quidem, consectetur qui perferendis cum culpa natus. Laboriosam odio assumenda explicabo commodi molestias accusantium amet! Dolores quasi molestias eligendi rem?",
+        "name-icon":"service1"   ,
+        "icon":"fa-solid fa-laptop-code"         
+        },    
+        {
+        "title": "Admin de",
+        "link": "/data_managment",
+        "title_under": "Contenido",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores saepe laborum et, tempore ut dolorem nulla nesciunt necessitatibus voluptatibus fuga, nobis eveniet placeat eligendi eos earum ipsum repellendus ullam facere quidem, consectetur qui perferendis cum culpa natus. Laboriosam odio assumenda explicabo commodi molestias accusantium amet! Dolores quasi molestias eligendi rem?",
+        "name-icon":"service3"   ,
+        "icon":"fa-solid fa-rectangle-ad"
+        },
+        {
+        "title": "Lanzamiento ",
+        "link": "ads_launcher",
+        "title_under": "Anuncios",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores saepe laborum et, tempore ut dolorem nulla nesciunt necessitatibus voluptatibus fuga, nobis eveniet placeat eligendi eos earum ipsum repellendus ullam facere quidem, consectetur qui perferendis cum culpa natus. Laboriosam odio assumenda explicabo commodi molestias accusantium amet! Dolores quasi molestias eligendi rem?",
+        "name-icon":"service4"   ,
+        "icon":"fa-solid fa-rectangle-ad"
+        }
+        ]
+}
+  

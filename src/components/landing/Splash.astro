@@ -1,0 +1,43 @@
+---
+// import Supabase from "../../icons/Supabase.astro";
+// import AstroIcon from "../../icons/AstroIcon.astro";
+import Branding from "../../components/CADD/Branding.astro";
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+---
+
+<section class="section items-center flex flex-col justify-center text-center  text-secondary dark:text-white h-[100vh]" >
+    <h1 class="text-2xl sm:text-4xl font-bold ">{title}</h1>
+    <ul class="flex gap-6 items-center font-bold text-2xl mt-6">
+        <li
+          class="dark:bg-zinc-800 bg-secondary border-t dark:border-zinc-700 h-20 w-20 border-transparent rounded-lg shadow dark:shadow-none flex items-center justify-center"        
+        >
+          <!-- <AstroIcon /> -->
+          <img
+          class="w-16"
+           src="https://simca.unicauca.edu.co/simca/resources/images/logo.png" alt="">
+        </li>
+         &plus;
+        <li
+          class="dark:bg-secondary bg-[white] border-t dark:border-zinc-700 h-20 w-20 border-transparent rounded-lg shadow  flex items-center justify-center"
+        >
+        <div class="" style="padding: 200px; margin: 20px">          
+          <!-- <LogoCAD  theme_text="" font="1px" ></LogoCAD> -->
+          <Branding
+          brandingColor={"cyan"}
+          themeColor="currentColor"
+          w="60px"
+      />
+        </div>
+         
+        </li>
+      </ul>
+    <p class="mt-6 ">Descubre como todo puede ser mas facil desde nuestra aplicacion.</p>
+    <a
+        href="https://github.com/kevinzunigacuellar/astro-supabase"
+        class="font-mono max-w-prose underline underline-offset-2 hover:text-blue-700 text-blue-600 dark:text-blue-500 dark:hover:text-blue-400"
+        >Source code on GitHub</a
+    >
+</section>

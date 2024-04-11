@@ -1,0 +1,73 @@
+{
+    "hombre": [
+        {
+            "id": 1,
+            "label": "ROPA",
+            "url": "/hombre/ropa",
+            "subcategories": [
+                {
+                    "id": 11,
+                    "label": "Jeans",
+                    "url": "/hombre/ropa/jeans",
+                    "subSubcategories": [
+                        { "id": 111, "label": "Slim", "url": "/hombre/ropa/jeans/slim" },
+                        { "id": 112, "label": "Baggy", "url": "/hombre/ropa/jeans/baggy" },
+                        { "id": 113, "label": "Bootcut", "url": "/hombre/ropa/jeans/bootcut" }
+                    ]
+                },
+                { "id": 12, "label": "Camisas", "url": "/hombre/ropa/camisas" }
+            ]
+        },
+        {
+            "id": 2,
+            "label": "ZAPATOS",
+            "url": "/hombre/zapatos",
+            "subcategories": [
+                {
+                    "id": 21,
+                    "label": "Casual",
+                    "url": "/hombre/zapatos/casual",
+                    "subSubcategories": [
+                        { "id": 211, "label": "Ferragamo", "url": "/hombre/zapatos/casual/ferragamo" },
+                        { "id": 212, "label": "Taps", "url": "/hombre/zapatos/casual/taps" }
+                    ]
+                },
+                {
+                    "id": 22,
+                    "label": "Deportivo",
+                    "url": "/hombre/zapatos/deportivo",
+                    "subSubcategories": [
+                        { "id": 221, "label": "Tenis", "url": "/hombre/zapatos/deportivo/tenis" },
+                        { "id": 222, "label": "Zapatillas", "url": "/hombre/zapatos/deportivo/zapatillas" }
+                    ]
+                }
+            ]
+        },
+        { "id": 3, "label": "ACCESORIOS", "url": "/hombre/accesorios" },
+        { "id": 4, "label": "BOLSOS | MOCHILAS", "url": "/hombre/bolsos-mochilas" },
+        { "id": 5, "label": "SECOND HAND", "url": "/hombre/second-hand" }
+    ],
+    "mujer": [
+        {
+            "id": 6,
+            "label": "ROPA",
+            "url": "/mujer/ropa",
+            "subcategories": [
+                {
+                    "id": 61,
+                    "label": "Vestidos",
+                    "url": "/mujer/ropa/vestidos",
+                    "subSubcategories": [
+                        { "id": 611, "label": "Cortos", "url": "/mujer/ropa/vestidos/cortos" },
+                        { "id": 612, "label": "Largos", "url": "/mujer/ropa/vestidos/largos" }
+                    ]
+                },
+                { "id": 62, "label": "Faldas", "url": "/mujer/ropa/faldas" }
+            ]
+        },
+        { "id": 7, "label": "ZAPATOS", "url": "/mujer/zapatos" },
+        { "id": 8, "label": "ACCESORIOS", "url": "/mujer/accesorios" },
+        { "id": 9, "label": "BOLSOS | MOCHILAS", "url": "/mujer/bolsos-mochilas" },
+        { "id": 10, "label": "SECOND HAND", "url": "/mujer/second-hand" }
+    ]
+}

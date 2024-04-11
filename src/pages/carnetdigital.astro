@@ -1,8 +1,9 @@
 ---
-import Layout from "../layouts/layout.astro";
+
 import { supabase } from "../lib/supabase";
 import Carnet from "../components/resources/Carnet.astro";
 import { getUserDataByEmail } from "../config/servicesSupabase/getUserDataByEmail"
+import Layout from "../layout/layout.astro";
 
 const { cookies, redirect } = Astro;
 

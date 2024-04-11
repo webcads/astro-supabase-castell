@@ -1,9 +1,9 @@
 ---
 import Footer from "../components/Footer.astro";
-import { darkMode } from "../../tailwind.config.cjs";
+// import { darkMode } from "../../tailwind.config.cjs";
 import "../styles/Layout.css";
 import Header from "../components/Header.astro";
-import FloatingButtons from "../components/icons/FloatingButtons.astro";
+// import FloatingButtons from "../components/icons/FloatingButtons.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -46,7 +46,7 @@ const { title, subtitle, description } = Astro.props;
         />
         <title>{title} | {subtitle}</title>
 
-        <!-- <ViewTransitions /> -->
+        <ViewTransitions />
     </head>
     <body >
         <Header />
@@ -55,7 +55,7 @@ const { title, subtitle, description } = Astro.props;
                 <slot />
             </div>
             <Footer />
-            <FloatingButtons />
+            <!-- <FloatingButtons /> -->
         </main>
 
         <!-- flowbite scripts -->

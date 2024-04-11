@@ -1,0 +1,160 @@
+	
+  [
+
+  {
+        imgMobil: "clas_oz1.png",
+        title: "Dark Necessities",
+        subtitle: "Dark t-shirt",
+        price: 129000,
+        arrayColor: []
+    },
+    {
+        imgMobil: "clas_oz2.png",
+        title: "Classic Oversize",
+        subtitle: "White t-shirt",
+        price: 129000,
+        arrayColor: []
+    },
+    {
+        imgMobil: "clas_oz3.png",
+        title: "Classic Oversize",
+        subtitle: "White t-shirt",
+        price: 129000,
+        arrayColor: ['white', 'black', 'green']
+    },
+    {
+        imgMobil: "clas_oz4.png",
+        title: "Classic Oversize",
+        subtitle: "White t-shirt",
+        price: 129000,
+        arrayColor: ['white', 'black', 'green']
+    },
+    {
+        imgMobil: "clas_oz5.png",
+        title: "Classic Oversize",
+        subtitle: "White t-shirt",
+        price: 129000,
+        arrayColor: ['white', 'black', 'green']
+    }
+];
+const productos2 = [	
+    {
+        imgMobil: "h1.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: []
+    },
+    {
+        imgMobil: "h2.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: []
+    },
+    {
+        imgMobil: "h3.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: ['white', 'black', 'green']
+    },
+    {
+        imgMobil: "h4.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: ['white', 'black', 'green']
+    },
+    {
+        imgMobil: "h5.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: ['white', 'black', 'green']
+    },
+	{
+        imgMobil: "h6.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: ['white', 'black', 'green']
+    },
+	{
+        imgMobil: "h7.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: ['white', 'black', 'green']
+    },
+	{
+        imgMobil: "h8.png",
+        title: "Hoodies/Classic",
+        subtitle: "Hoodie",
+        price: 249900,
+        arrayColor: ['white', 'black', 'green']
+    }
+];
+const productos3 = [	
+    {
+        imgMobil: "f1.png",
+        title: "Felpa Interlock",
+        subtitle: "Camisa",
+        price: 169900,
+        arrayColor: []
+    },
+    {
+        imgMobil: "f2.png",
+        title: "Felpa Interlock",
+        subtitle: "Camisa",
+        price: 169900,
+        arrayColor: []
+    },
+    {
+        imgMobil: "f3.png",
+        title: "Felpa Interlock",
+        subtitle: "Camisa",
+        price: 169900,
+        arrayColor: ['white', 'black', 'green']
+    },
+    {
+        imgMobil: "f4.png",
+        title: "Felpa Interlock",
+        subtitle: "Camisa",
+        price: 169900,
+        arrayColor: ['white', 'black', 'green']
+    },
+    {
+        imgMobil: "f5.png",
+        title: "Felpa Interlock",
+        subtitle: "Camisa manga larga",
+        price: 169900,
+        arrayColor: ['white', 'black', 'green']
+    },
+	{
+        imgMobil: "f6.png",
+        title: "Felpa Interlock",
+        subtitle: "Camisa manga larga",
+        price: 169900,
+        arrayColor: ['white', 'black', 'green']
+    },
+	
+
+];
+const productos4 = [	
+    {
+        imgMobil: "ch1.png",
+        title: "Chandal",
+        subtitle: "Conjunto",
+        price:  249900,
+        arrayColor: []
+    },
+    {
+        imgMobil: "ch2.png",
+        title: "Chandal",
+        subtitle: "Conjunto",
+        price:  249900,
+        arrayColor: []
+    }, 
+
+]

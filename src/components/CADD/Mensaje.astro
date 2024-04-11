@@ -1,0 +1,248 @@
+---
+import { Image } from "astro:assets"
+---
+
+<style>
+    /* Agrega estilos CSS según tus necesidades */
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn ease-in-out 1;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .bounce {
+        animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+</style>
+
+
+<div class="section flex  flex-row flex-wrap items-center justify-center mb-0 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700   bg-white dark:bg-gray-800" style="padding: 100px">
+    <figure class="flex max-w-fit p-5 m-4 mb-10 ml-10  min-w-[400px] border rounded-lg flex-col items-center justify-center  text-center bg-white   border-gray-200  md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in">
+   
+
+        <figcaption class="flex items-center justify-center ">
+            
+            <Image  class="rounded-full w-9 h-9"  width="94" height="94" src="https://img.icons8.com/3d-fluency/94/youtube-play.png" alt="youtube-play"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Benjamin Castell</div>
+                <!-- <div class="text-sm text-gray-500 dark:text-gray-400 ">Creador de Multimedia</div> -->
+            </div>
+        </figcaption>  
+        <form class="min-w-full">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="I need my professional website 💼" required>
+             
+            </div>
+        </form>
+          
+    </figure>
+    <figure class="flex max-w-fit p-5 m-3 ml-20 -mb-20  min-w-[400px] border rounded-lg flex-col items-center justify-center  text-center bg-white   border-gray-200  md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in" style="animation-delay: 0.5s;">
+   
+
+        <figcaption class="flex items-center justify-center ">
+            
+            <Image class="rounded-full w-9 h-9" width="94" height="94" src="https://img.icons8.com/3d-fluency/94/chrome.png" alt="chrome"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Steven Gomez</div>
+                <!-- <div class="text-sm text-gray-500 dark:text-gray-400 ">Propietario Mundo Moda</div> -->
+            </div>
+        </figcaption>  
+        <form class="min-w-full">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="¿Cómo 🎨 diseñar un logo en un día? " required>
+             
+            </div>
+        </form>
+          
+    </figure>
+    <figure class="flex max-w-fit p-5 m-4 mr-28  min-w-[400px] border rounded-lg flex-col items-center justify-center  text-center bg-white   border-gray-200  md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in" style="animation-delay: 0.1s;">
+   
+
+        <figcaption class="flex items-center justify-center ">
+            
+            <Image  class="rounded-full w-9 h-9" width="48" height="48" src="https://img.icons8.com/fluency/48/facebook.png" alt="facebook"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Ovidio Castro</div>
+                <!-- <div class="text-sm text-gray-500 dark:text-gray-400 ">Vendedor de dispositivos para pc</div> -->
+            </div>
+        </figcaption>  
+        <form class="min-w-full">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Vendedor y marketero</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="How to  pay for ads and SEO? 💳🔍" required>
+             
+            </div>
+        </form>
+          
+    </figure>
+    <figure class="flex max-w-fit p-5 m-4  min-w-[400px] border rounded-lg flex-col items-center justify-center  text-center bg-white   border-gray-200  md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in" style="animation-delay: 0.5s;">
+   
+
+        <figcaption class="flex items-center justify-center ">
+            
+            <Image  class="rounded-full w-9 h-9" width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>          
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Laura Osorio</div>
+                <!-- <div class="text-sm text-gray-500 dark:text-gray-400 ">Vendedor de dispositivos para pc</div> -->
+            </div>
+        </figcaption>  
+        <form class="min-w-full">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Vendedor y marketero</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="!Necesito el Branding para mi empresa :(" required>
+             
+            </div>
+        </form>
+          
+    </figure>
+    <figure class="flex max-w-fit p-5 m-1 mt-10  min-w-[400px] border rounded-lg flex-col items-center justify-center  text-center bg-white   border-gray-200  md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in" style="animation-delay: 0.5s;">
+   
+
+        <figcaption class="flex items-center justify-center ">
+            
+            <Image  class="rounded-full w-9 h-9" width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Juan David</div>
+                <!-- <div class="text-sm text-gray-500 dark:text-gray-400 ">Vendedor de dispositivos para pc</div> -->
+            </div>
+        </figcaption>  
+        <form class="min-w-full">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Vendedor y marketero</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="I don't like 👎my Web Design " required>
+             
+            </div>
+        </form>
+          
+    </figure>
+    <figure class="flex max-w-fit p-5 m-4 -mt-10 -mr-10  min-w-[400px] border rounded-lg flex-col items-center justify-center  text-center bg-white   border-gray-200  md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in" style="animation-delay: 0.5s;">
+   
+
+        <figcaption class="flex items-center justify-center ">
+            
+            <Image  class="rounded-full w-9 h-9" width="48" height="48"  src="https://img.icons8.com/color-glass/48/gmail.png" alt="gmail"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Pablo Sanchez</div>
+                <!-- <div class="text-sm text-gray-500 dark:text-gray-400 ">Vendedor de dispositivos para pc</div> -->
+            </div>
+        </figcaption>  
+        <form class="min-w-full">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Vendedor y marketero</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="💻😢!Mi web no carga y luce mal " required>
+             
+            </div>
+        </form>
+          
+    </figure>
+    <figure class="flex max-w-fit p-5 m-4 mt-12 min-w-[400px] border rounded-lg flex-col items-center justify-center text-center bg-white border-gray-200 md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in">
+        <figcaption class="flex items-center justify-center">
+            <Image  class="rounded-full w-9 h-9" width="48" height="48"  src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Maria Rodriguez</div>
+            </div>
+        </figcaption>
+        <form class="min-w-full">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  placeholder="🚀How to improve my website's loading speed?" required>
+            </div>
+        </form>
+    </figure>
+    <figure class="flex max-w-fit p-5 m-4 ml-12 min-w-[400px] border rounded-lg flex-col items-center justify-center text-center bg-white border-gray-200 md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in">
+        <figcaption class="flex items-center justify-center">
+            <Image  class="rounded-full w-9 h-9" width="48" height="48" src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" alt="tiktok--v1"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Carolina Torres</div>
+            </div>
+        </figcaption>
+        <form class="min-w-full">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="¿Cuál es la importancia del SEO para mi negocio?" required>
+            </div>
+        </form>
+    </figure>
+    
+    <figure class="flex max-w-fit p-5 m-4 min-w-[400px] border rounded-lg flex-col items-center justify-center text-center bg-white border-gray-200 md:rounded-t-none md:rounded-ss-lg dark:bg-gray-800 dark:border-gray-700 fade-in">
+        <figcaption class="flex items-center justify-center">
+            <Image  class="rounded-full w-9 h-9" width="48" height="48"  src="https://img.icons8.com/pulsar-line/48/threads.png" alt="threads"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Andrés Lopez</div>
+            </div>
+        </figcaption>
+        <form class="min-w-full">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="¿Cómo aumentar mis seguidores en redes sociales?" required>
+            </div>
+        </form>
+    </figure>
+      
+</div>
+<script is:inline>
+    // Agrega este script para aplicar el efecto de aparición a las figuras de forma aleatoria
+    const figures = document.querySelectorAll('.fade-in');
+    figures.forEach((figure) => {
+      const randomDelay = Math.random() * 1.5; // Ajusta el rango según tus necesidades
+      figure.style.animationDelay = `${randomDelay}s`;
+    });
+  </script>

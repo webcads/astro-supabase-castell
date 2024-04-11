@@ -1,0 +1,25 @@
+{
+    "Dark Necessities": [
+        {
+            "imgBanner": "hero1.png",
+            "imgLogo": "",
+            "title": "Dark Necessities",
+            "subtitle": "are part of my design",            
+            "arrayCategorias": ["Ropa", "Zapatos", "Acessorios"],
+            "item1" : "item1.png",
+            "item2" : "item2.png"
+        }        
+    ],
+    "Core": [
+        {
+            "imgBanner": "hero2.png",
+            "imgLogo": "logo2.png",
+            "title": "Core Collections",
+            "subtitle": "WEARING ART, BE UNIQUE",            
+            "arrayCategorias": ["Hoodies", "Art", "Collection"],
+            "item1" : "item4.png",
+            "item2" : "item3.png"
+        }
+        
+    ]    
+}
