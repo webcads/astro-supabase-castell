@@ -1,3 +1,4 @@
+//signin
 import type { APIRoute } from "astro";
 import { supabase } from "../../../lib/supabase";
 import type { Provider } from "@supabase/supabase-js";
@@ -14,8 +15,7 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
       options: {
         redirectTo: import.meta.env.DEV
           ? "http://localhost:4321/api/auth/callback"
-          : "https://astro-supabase-castell-p7biy2m3j-castelll0009s-projects.vercel.app/api/auth/callback",
-          // : "https://lucky-meringue-8b3000.netlify.app/api/auth/callback"
+          : "https://astro-supabase-castell.vercel.app/api/auth/callback",       
       },
     });
 
