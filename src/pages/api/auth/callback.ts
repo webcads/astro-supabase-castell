@@ -24,5 +24,7 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
     path: "/",
   });
 
-  return redirect("/dashboard");
+   // Extraer la ruta previa almacenada en sessionStorage
+   const previousRoute = sessionStorage.getItem("previousRoute") || "/";
+  return redirect(previousRoute);
 };

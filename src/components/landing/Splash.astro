@@ -2,7 +2,7 @@
 // import Supabase from "../../icons/Supabase.astro";
 // import AstroIcon from "../../icons/AstroIcon.astro";
 import Branding from "../../components/CADD/Branding.astro";
-// import Button from "../../components/ui/Button.astro"
+import Button from "../../components/ui/Button.astro"
 interface Props {
     title: string;
 }
@@ -40,11 +40,11 @@ const { title } = Astro.props;
      <!-- get start button -->
      <!-- <Button></Button> -->
      <div class="flex flex-col gap-2 pt-4">
-      <a href="/carnetdigital?previousRoute=/carnetdigital" onclick="handleLinkClick('/carnetdigital')" type="button" class="text-secondary border   border-secondary hover:bg-secondary hover:text-white font-medium rounded-full text-sm p-2.5 pt-1 pb-1 text-center inline-flex items-center dark:border-primary dark:text-primary dark:hover:text-secondary dark:focus:ring-blue-800 dark:hover:bg-white">
-        <svg  xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><rect width="32" height="40" x="8" y="4" rx="2"/><path d="M24 19a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path stroke-linecap="round" d="M30 25a6 6 0 0 0-12 0m0 6h12m-12 6h7"/></g></svg>
+        <a href="/carnetdigital" type="button" class="text-secondary border   border-secondary hover:bg-secondary hover:text-white font-medium rounded-full text-sm p-2.5 pt-1 pb-1 text-center inline-flex items-center dark:border-primary dark:text-primary dark:hover:text-secondary dark:focus:ring-blue-800 dark:hover:bg-white">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><rect width="32" height="40" x="8" y="4" rx="2"/><path d="M24 19a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"/><path stroke-linecap="round" d="M30 25a6 6 0 0 0-12 0m0 6h12m-12 6h7"/></g></svg>
         <span class="sr-only">Icon description</span>
         Carnet Digital
-    </a>
+        </a>
     
         <a  href="/dashboard" class="text-secondary border   border-secondary hover:bg-secondary hover:text-white font-medium rounded-full text-sm p-2.5 pt-1 pb-1 text-center inline-flex items-center dark:border-primary dark:text-primary dark:hover:text-secondary dark:focus:ring-blue-800 dark:hover:bg-white">
         <svg
@@ -63,15 +63,3 @@ const { title } = Astro.props;
   
      
 </section>
-
-
-<script is:inline>
-  // Variable global para almacenar la ruta previa
-  let previousRoute = "";
-
-  // Función para manejar el clic en los enlaces
-  function handleLinkClick(previousRouteValue) {
-      previousRoute = previousRouteValue;
-      console.log("Previous Route:", previousRoute);
-  }
-</script>
