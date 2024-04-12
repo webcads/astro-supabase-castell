@@ -2,7 +2,7 @@ import { defineMiddleware } from "astro:middleware";
 import { supabase } from "../lib/supabase";
 import micromatch from "micromatch";
 
-const protectedRoutes = ["/dashboard(|/)"];
+const protectedRoutes = ["/dashboard(|/)","/carnetdigital(|/)"];
 const redirectRoutes = ["/signin(|/)", "/register(|/)"];
 const proptectedAPIRoutes = ["/api/guestbook(|/)"];
 
@@ -42,6 +42,7 @@ export const onRequest = defineMiddleware(
         path: "/",
         secure: true,
       });
+      
     }
 
     if (micromatch.isMatch(url.pathname, redirectRoutes)) {

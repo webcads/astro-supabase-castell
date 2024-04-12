@@ -2,13 +2,17 @@
 // import Base from "../layout/Base.astro";
 
 import Splash from "../components/landing/Splash.astro"
-import Layout from "../layout/layout.astro";
+import ThemeIcon from "../components/ui/ThemeIcon.astro"
+import LayoutGuest from "../layout/layoutGuest.astro";
 export const prerender = true;
 const title = "Unikit aplicacion web ";
 ---
 
-<Layout title={title}>     
+<LayoutGuest title={title}>     
 
   <Splash title={title}></Splash>
-
-</Layout>
+  <div class="fixed bottom-6 right-6">
+    <ThemeIcon />
+  </div>
+  
+</LayoutGuest>
