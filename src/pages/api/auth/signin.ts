@@ -2,12 +2,16 @@
 import type { APIRoute } from "astro";
 import { supabase } from "../../../lib/supabase";
 import type { Provider } from "@supabase/supabase-js";
+// Declarar redirectRoute como variable fuera de la función POST
+export let redirectRoute: string | undefined;
 
 export const POST: APIRoute = async ({ request, cookies, redirect }) => {
   const formData = await request.formData();
   const email = formData.get("email")?.toString();
   const password = formData.get("password")?.toString();
   const provider = formData.get("provider")?.toString();
+   redirectRoute = formData.get("redirect")?.toString(); // Obtener la ruta de redirección desde el formulario
+
 
   if (provider) {
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -51,5 +55,6 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
     secure: true,
   });
 
-  return redirect("/dashboard");
+ // Redirigir al usuario a la ruta de redirección seleccionada
+  return redirect(redirectRoute || "/dashboard"); // Usar la ruta de redirección obtenida del formulario
 };

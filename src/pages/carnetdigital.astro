@@ -1,5 +1,6 @@
 ---
 import Base from "../layout/Base.astro";
+
 // import { Reviews, type GuestbookEntry } from "../components/Reviews";
 
 const { email } = Astro.locals;
@@ -14,6 +15,7 @@ const { email } = Astro.locals;
 // import { supabase } from "../lib/supabase";
 // import Carnet from "../components/resources/Carnet.astro";
 import { getUserDataByEmail } from "../config/servicesSupabase/getUserDataByEmail";
+import Carnet from "../components/resources/Carnet.astro";
 // import Layout from "../layout/layout.astro";
 
 // const { cookies, redirect } = Astro;
@@ -49,7 +51,7 @@ console.log("DATOS USARIO FROM SUPABASE", usuario);
 ---
 
 <Base title="Carnet digital">
-  <!-- <section
+  <section
     class="section flex flex-col gap-5 justify-between items-center"
     style="padding: 5.6vw"
     transition:name="homologacion"
@@ -70,5 +72,5 @@ console.log("DATOS USARIO FROM SUPABASE", usuario);
       class="mb-10 bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 px-3 py-1 rounded-md"
       >Sign out</a
     >
-  </section> -->
+  </section>
 </Base>

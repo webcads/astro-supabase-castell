@@ -1,6 +1,7 @@
 //callback
 import type { APIRoute } from "astro";
 import { supabase } from "../../../lib/supabase";
+import { redirectRoute } from "../auth/signin"; // Importar redirectRoute desde signin.ts
 
 export const GET: APIRoute = async ({ url, cookies, redirect }) => {
   const authCode = url.searchParams.get("code");
@@ -23,8 +24,9 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
   cookies.set("sb-refresh-token", refresh_token, {
     path: "/",
   });
+  
+  
 
-   // Extraer la ruta previa almacenada en sessionStorage
-   const previousRoute = sessionStorage.getItem("previousRoute") || "/";
-  return redirect(previousRoute);
+   // Redirigir al usuario a la ruta seleccionada
+   return redirect(redirectRoute || "/dashboard");
 };
