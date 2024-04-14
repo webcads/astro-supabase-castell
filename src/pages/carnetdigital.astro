@@ -1,5 +1,6 @@
 ---
 import Base from "../layout/Base.astro";
+import ModalCarnet from "../components/resources/ModalCarnet.astro"
 
 // import { Reviews, type GuestbookEntry } from "../components/Reviews";
 
@@ -59,7 +60,7 @@ console.log("DATOS USARIO FROM SUPABASE", usuario);
   >
     <h1 class="text-secondary dark:text-white">Carnet Digital Unicauca</h1>
    
-
+    <ModalCarnet></ModalCarnet>
     <Carnet
       foto={usuario.picture}
       nombres={usuario.nombres}
