@@ -1,55 +1,40 @@
-// Importar las dependencias necesarias
 import type { APIRoute } from "astro";
 import { supabase } from "../../lib/supabase";
-let mail = "";
-// Definir la ruta POST para actualizar la información de un usuario
+
 export const POST: APIRoute = async ({ request, redirect }) => {
-  
-    // Obtener los datos del formulario del cuerpo de la solicitud
-    const { identificacion, rh, email } = await request.json(); // Supongamos que correo_unicauca es el ID del usuario obtenido de alguna manera
-    mail = email;
-    // Verificar si el email del usuario está presente
-    if (!email) {
-      // Si el ID del usuario no está presente, devolver un error
-      return redirect("email no encontrado");
-    }
+  // Obtener los datos del formulario del cuerpo de la solicitud
+  const { email, rh, foto } = await request.json();
 
-    // Verificar si el usuario ya tiene identificación y tipo de sangre establecidos
-    const { data: existingUser, error: searchError } = await supabase
-      .from("usuario")
-      .select("identificacion, rh")
-      .eq("correo_unicauca", email)
-      .single();
+  // Verificar si el correo electrónico del usuario está presente
+  if (!email) {
+    return redirect("/email no encontrado");
+  }
 
-    if (searchError) {
-      return redirect("error isnertar user");
-    }
+  // Verificar si el usuario ya existe en la tabla de usuarios
+  let { data: existingUser, error: searchError } = await supabase
+    .from("usuario")
+    .select("*")
+    .eq("correo_unicauca", email)
+    .single();
 
-    // Si el usuario ya tiene identificación y tipo de sangre establecidos, o si los campos proporcionados no son nulos, redirigir a /carnetdigital
-    if (existingUser && (existingUser.identificacion !== null && existingUser.rh !== null) || (identificacion !== null && rh !== null)) {
-      return redirect("/carnetdigital");
-    }
+  if (searchError) {
+    return redirect("/error al buscar usuario");
+  }
 
-    // Si el usuario no tiene identificación o tipo de sangre establecidos y los campos proporcionados no son nulos, actualizar la información
-    const { data: updateData, error: updateError } = await supabase
-      .from("usuario")
-      .update({
-        identificacion,
-        rh,
-      })
-      .eq("correo_unicauca", email);
 
-    if (updateError) {
-      // Manejar el error si ocurre
-      return new Response(
-        JSON.stringify({
-          error: "Error al actualizar la información del usuario",
-        }),
-        { status: 500 },
-      );
-    }
 
-    // // Redirigir a /carnetdigital al finalizar
-    return redirect("/carnetdigital");
-  
+  // Insertar los datos del carné en la tabla de carnés
+  const { data: carnetData, error: carnetInsertError } = await supabase
+    .from("carnet")
+    .insert([{ usuario_id: existingUser.id, rh, foto }]);
+
+  if (carnetInsertError) {
+    return new Response(
+      JSON.stringify({ error: "Error al insertar datos del carné" }),
+      { status: 500 }
+    );
+  }
+
+  // Redirigir al usuario a la página de carné digital
+  return redirect("/carnetdigital");
 };
