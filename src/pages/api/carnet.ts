@@ -1,32 +1,33 @@
 import type { APIRoute } from "astro";
 import { supabase } from "../../lib/supabase";
 
-export const POST: APIRoute = async ({ request }) => {
-  // Obtener los datos del formulario del cuerpo de la solicitud
-  const { email, rh, foto } = await request.json();
+export const POST: APIRoute = async ({ request,redirect }) => {
+  const formData = await request.formData();
+  const email = formData.get("email") as string;
+  const rh = formData.get("rh") as string;
+  const identificacion = formData.get("identificacion") as string;
 
   // Verificar si el correo electrónico del usuario está presente
   if (!email) {
-    return redirect("/email no encontrado");
+    return new Response("Email no encontrado", { status: 400 });
   }
 
   // Verificar si el usuario ya existe en la tabla de usuarios
-  let { data: existingUser, error: searchError } = await supabase
+  const { data: existingUser, error: searchError } = await supabase
     .from("usuario")
     .select("*")
     .eq("correo_unicauca", email)
     .single();
 
-  if (searchError) {
-    return redirect("/error al buscar usuario");
+  if (searchError || !existingUser) {
+    return new Response("Error al buscar usuario", { status: 404 });
   }
-
-
 
   // Insertar los datos del carné en la tabla de carnés
   const { data: carnetData, error: carnetInsertError } = await supabase
     .from("carnet")
-    .insert([{ usuario_id: existingUser.id, rh, foto }]);
+    .insert([{ usuario_id: existingUser.id, rh, identificacion }])
+    .select();
 
   if (carnetInsertError) {
     return new Response(
@@ -36,5 +37,5 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   // Redirigir al usuario a la página de carné digital
-  // return redirect("/carnetdigital");
+  return    redirect("/carnetdigital");
 };

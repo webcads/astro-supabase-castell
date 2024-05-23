@@ -30,21 +30,21 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
     path: "/",
   });
 
-   // Dividir el full_name en nombres y apellidos
-   const fullName = user.user_metadata?.full_name;
-   let nombres = '';
-   let apellidos = '';
- 
-   if (fullName) {
-     const parts = fullName.split(' ');
-     nombres = parts.slice(0, -2).join(' ');
-     apellidos = parts.slice(-2).join(' ');
-   }
-   // Verificar si ya existe un usuario con el mismo uid_auth en la tabla usuario
+  // Dividir el full_name en nombres y apellidos
+  const fullName = user.user_metadata?.full_name;
+  let nombres = '';
+  let apellidos = '';
+
+  if (fullName) {
+    const parts = fullName.split(' ');
+    nombres = parts.slice(0, -2).join(' ');
+    apellidos = parts.slice(-2).join(' ');
+  }
+  // Verificar si ya existe un usuario con el mismo uid_auth en la tabla usuario
   const { data: existingUsers, error: userError } = await supabase
-  .from('usuario')
-  .select('*')
-  .eq('uid_auth', user.id);
+    .from('usuario')
+    .select('*')
+    .eq('uid_auth', user.id);
 
   if (userError) {
     console.error("Error al buscar usuarios:", userError);
@@ -52,54 +52,52 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
     return new Response("Error al buscar usuarios", { status: 500 });
   }
 
-    // Si ya existe un usuario con el mismo uid_auth, no es necesario insertar un nuevo registro
-    if (existingUsers && existingUsers.length > 0) {
-      console.log("El usuario ya existe en la tabla usuario. Saltando la inserción.");
+  // Si ya existe un usuario con el mismo uid_auth, no es necesario insertar un nuevo registro
+  if (existingUsers && existingUsers.length > 0) {
+    console.log("El usuario ya existe en la tabla usuario. Saltando la inserción.");
+  } else {
+    // Insertar más campos del usuario en la tabla usuario
+    const { data: userData, error: insertError } = await supabase
+      .from('usuario')
+      .insert([
+        {
+          uid_auth: user.id,
+          picture: user.user_metadata?.picture,
+          full_name: fullName,
+          nombres: nombres,
+          apellidos: apellidos,
+          correo_unicauca: user.email
+        }
+      ]);
+
+    if (insertError) {
+      console.error("Error al insertar los datos del usuario:", insertError);
+      // Manejar el error apropiadamente
+      return new Response("Error al insertar los datos del usuario", { status: 500 });
     } else {
-      // Insertar más campos del usuario en la tabla usuario
-      const { data: userData, error: insertError } = await supabase
-        .from('usuario')
+      console.log("Usuario insertado correctamente en la tabla usuario.");
+
+      //Insert a  new carnet and related this with the user just authenticated      
+      const { data: carnetData, error: carnetInsertError } = await supabase
+        .from('carnet')
         .insert([
-          { 
-            uid_auth: user.id,
-            picture: user.user_metadata?.picture, 
-            full_name: fullName,
-            nombres: nombres,
-            apellidos: apellidos,
-            identificacion: user.user_metadata?.identificacion,
-            tipo_sangre: user.user_metadata?.tipo_sangre,
-            correo_unicauca: user.email
+          {
+            foto: user.user_metadata?.picture, // Asegúrate de tener un campo para la foto del carnet en user_metadata
+            uid_auth: user.id, // Usa el ID del usuario insertado anteriormente
+
           }
         ]);
-  
-      if (insertError) {
-        console.error("Error al insertar los datos del usuario:", insertError);
+
+      if (carnetInsertError) {
+        console.error("Error al insertar los datos del carnet:", carnetInsertError);
         // Manejar el error apropiadamente
-        return new Response("Error al insertar los datos del usuario", { status: 500 });
+        return new Response("Error al insertar los datos del carnet", { status: 500 });
       } else {
-        console.log("Usuario insertado correctamente en la tabla usuario.");
-  
-        // // Insertar datos del carnet del usuario en la tabla carnet
-        // const { data: carnetData, error: carnetInsertError } = await supabase
-        //   .from('carnet')
-        //   .insert([
-        //     {
-        //       foto: user.user_metadata?.picture, // Asegúrate de tener un campo para la foto del carnet en user_metadata
-        //       usuario_id: user.id, // Usa el ID del usuario insertado anteriormente
-              
-        //     }
-        //   ]);
-  
-        // if (carnetInsertError) {
-        //   console.error("Error al insertar los datos del carnet:", carnetInsertError);
-        //   // Manejar el error apropiadamente
-        //   return new Response("Error al insertar los datos del carnet", { status: 500 });
-        // } else {
-        //   console.log("Carnet insertado correctamente en la tabla carnet.");
-        // }
+        console.log("Carnet insertado correctamente en la tabla carnet.");
       }
     }
-    
-   // Redirigir al usuario a la ruta seleccionada
-   return redirect(redirectRoute || "/dashboard");
+  }
+
+  // Redirigir al usuario a la ruta seleccionada
+  return redirect(redirectRoute || "/dashboard");
 };
