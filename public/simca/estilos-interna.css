@@ -1,0 +1,1723 @@
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */ 
+
+/* #Page Styles
+================================================== */
+
+/***** Generales *****/
+body {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/background.png") no-repeat;
+	background-color: #0C3664;
+	background-size: 100%;
+	font-family: "Vegur", "Arial Narrow", Arial, sans-serif !important; /* DUX Sin el important se payasea todo con los Ajax Updates */
+}
+body.interno {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/back-interno.png") repeat-y;
+	background-color: #FFFFFF;
+	background-size: 100%;
+}
+h3, h5 {
+	font-family: "Vegur", "Arial Narrow", Arial, sans-serif;
+}
+#antorcha {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/antorcha.png") no-repeat;
+	height: 592px;
+    right: 15%;
+    top: 0;
+    width: 251px;
+    position: fixed;
+	z-index: -1;
+}
+#bandera {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/bandera.png") no-repeat;
+	width: 345px;
+	height: 130px;
+	position: fixed;
+	z-index: -1;
+	left: 0;
+	bottom: 0;
+}
+#general {
+	margin: 0 auto 15px;
+	display: table;
+}
+
+/***** Header *****/
+header {
+	display: table;
+	margin: 30px auto 5px;
+}
+header .separador {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/barra.png") no-repeat;
+	width: 2px;
+	height: 40px;
+	float: left;
+	margin: 25px 10px 27px 0;
+}
+	#logoU {
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/logo.png") no-repeat;
+		width: 188px;
+		height: 92px;
+		float: left;
+		margin-right: 10px;
+	}
+	#desc {
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 17px;
+		color: #FFFFFF;
+		margin-top: 27px;
+    	width: 235px;
+    	float: left;
+	}
+header.interno {
+	display: block;
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/back-header-int1.png") no-repeat center; /* DUX Para centrar el bg del header verticalmente */
+	background-size: 100%;
+	background-color: #0C3664;
+	margin: 0;
+	position: relative;
+}
+header.interno #logoU {
+	margin: 5px 10px 5px 50px;
+	position: relative;
+	z-index: 1;
+}
+header.interno .separador {
+	margin-top: 30px;
+	margin-bottom: 32px;
+}
+header.interno #desc {
+	margin-top: 32px;
+	position: relative;
+	z-index: 1;
+}
+	#banderaHeader {
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/bandera-head-int.png") no-repeat;
+		width: 195px;
+		height: 102px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+header.interno .logoSimca {
+	width: 183px;
+	height: 81px;
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/logo-simca-int.png") no-repeat;
+	float: right;
+	margin: 10px 190px 0 0;
+}
+div.container.interno {
+	height: 500px;
+}
+
+/***** Comunicados *****/
+#comunicados {
+	float: left;
+	margin: 35px 20px 0 0;
+}
+#comunicados .comunicado {
+	width: 296px;
+	height: 106px;
+	background-color: rgba(255,255,255,0.2);
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+	#comunicados .comunicado .alerta, #comunicados .comunicado .restriccion {
+		padding: 10px;
+	}
+	#comunicados .comunicado .alerta {
+		width: 269px;
+		height: 76px;
+		border: 4px solid #FFFFFF;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/back-comu-i.png") repeat-x;
+	}
+		#comunicados .comunicado .alerta .icoAlerta {
+			background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-alert.png") no-repeat;
+			width: 75px;
+			height: 68px;
+			float: left;
+			margin-right: 10px;
+		}
+		#comunicados .comunicado .alerta h5 {
+			font-size: 15px;
+			line-height: 16px;
+    		margin: 0 0 5px 0;
+    		color: #3F2007;
+    		font-weight: normal;
+		}
+		#comunicados .comunicado .alerta p {
+			font-size: 12px;
+			line-height: 14px;
+			color: #A47015;
+		}
+	#comunicados .comunicado .restriccion {
+		width: 269px;
+		height: 76px;
+		border: 4px solid #FFFFFF;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/back-comu-ii.png") repeat-x;
+	}
+		#comunicados .comunicado .restriccion .icoStop {
+			background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-stop.png") no-repeat;
+			width: 80px;
+			height: 80px;
+			margin-right: 10px;
+			float: left;
+			margin-right: 10px;
+		}
+		#comunicados .comunicado .restriccion h5 {
+			font-size: 15px;
+			line-height: 16px;
+    		margin: 0 0 5px 0;
+    		color: #530A06;
+    		font-weight: normal;
+		}
+		#comunicados .comunicado .restriccion p {
+			font-size: 12px;
+			line-height: 14px;
+			color: #DF5F58;
+		}
+		
+.enlace{text-decoration:underline !important;color:#0E5386 !important;}
+.enlace:hover{color:#005580 !important;}
+
+/***** Redes Sociales *****/
+#redesSociales {
+	margin: auto;
+	display: table;
+}
+#redesSociales ul li {
+	float: left;
+	margin-right: 10px;
+}
+#redesSociales ul li a:link, #redesSociales ul li a:visited {
+	width: 42px;
+	height: 42px;
+	display: block;
+}
+#redesSociales ul li a.twitter {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-redes.png") 0% 0% no-repeat;
+}
+#redesSociales ul li a.facebook {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-redes.png") 50% 0% no-repeat;
+}
+#redesSociales ul li a.flickr {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-redes.png") 100% 0% no-repeat;
+}
+
+/***** Login *****/
+#login {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/back-login.png") no-repeat;
+	padding: 35px 20px 0;
+    width: 330px;
+    height: 354px;
+    display: inline-block;
+}
+#login h3, #login form {
+	display: table;
+	margin: auto;
+}
+#login h3 {
+	font-size: 16px;
+	color: #26467E;
+}
+#login form input {
+	border: 2px solid #E5E5E8;
+	font-size: 14px;
+	color: #999999;
+	height: 22px;
+	padding-left: 40px;
+	width: 180px;
+}
+	#userName {
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-usuario.png") no-repeat;
+	}
+	#password {
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-pass.png") no-repeat;
+	}
+	#botonIngresar {
+		border: none;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/btn-ingresar.png") no-repeat;
+		width: 100px;
+		height: 36px;
+		margin: 10px auto 10px;
+		display: block;
+		color: #555555;
+		font-size: 12px;
+	}
+#login .logoSimca {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/logo-simca.png") no-repeat;
+	width: 101px;
+	height: 101px;
+	margin: 0 auto 10px;
+}
+
+/***** Informaci�n General de la actual sesi�n y usuario *****/
+#infoGeneral {
+	border: 5px solid #E4E4E4;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 8px 15px;
+	/*background: url("https://simca.unicauca.edu.co/simca/resources/images/back-info-general.png") repeat;*/
+	background: #F0F0F0; /* DUX color de fondo s�lido, no nos compliquemos la vida */
+	float: left;
+	margin-right: 20px;
+	/*min-height: 520px;*/
+}
+
+	#infoUsuario, #infoUsuario2{
+		/*width: 340px;*/
+		width: 49%;
+		border-radius: 5px;
+		float: left;
+		margin-bottom: 10px;
+		margin-left: 0;
+		/*margin-right: 25px;*/
+	}
+		#infoUsuario2
+		{
+			width: auto;
+		}
+	
+		.imagenUsuario {
+            /* aristo */
+            /*background-color: #D8D8D8;/**/
+
+            /* simca2_teal */
+            background-color: rgba(22, 119, 160, 0.14);/**/
+
+            /* simca2_navy */
+            /*background-color: #4698B6;/**/
+
+            border-radius: 5px 0 0 5px;
+            float: left;
+            margin-right: 1px;
+            padding: 10px 14px 10px;
+        }
+		
+			.imagenUsuario img
+			{
+				/*width: 69px !important;*/
+				height: 87px !important;
+			}
+		
+		ul.listaInfoUsuario {
+			float: left;
+			margin: 0;
+		}
+		
+		ul.listaInfoUsuario li {
+            /*height: 15px;*/
+            line-height: 25px;
+
+            /* aristo */
+            /*background-color: #D8D8D8;
+            color: #666666;/**/
+
+            /* simca2_teal */
+            background-color: rgba(22, 119, 160, 0.14);
+            color: #666666;/**/
+
+            /* simca2_navy */
+            /*background-color: #4698B6;
+            color: #FFFFFF;/**/
+
+            display: block;
+            padding: 0 90px 0 10px;
+            margin-bottom: 1px;
+            border-bottom: 1px solid #CECECE;
+            font-size: 14px;
+        }
+		
+		ul.listaInfoUsuario li.firstItem {
+			border-radius: 0 5px 0 0;
+		}
+		ul.listaInfoUsuario li.lastItem {
+			border-radius: 0 0 5px 0;
+		}
+		
+			#infoUsuario2 ul.listaInfoUsuario li.firstItem {
+				border-radius: 5px 5px 0 0 !important;
+			}
+			#infoUsuario2 ul.listaInfoUsuario li.lastItem {
+				border-radius: 0 0 5px 5px !important;
+			}
+		
+	#infoAcceso {
+		
+	}
+	#infoAccesoTitulo {
+		/*float: left;*/
+		display: inline-block;
+		width: 122px;
+		height: 32px;
+		border: 4px solid #E4E4E4;
+		border-radius: 5px;
+		background-color: #0E5386;
+		margin: 0 30px 5px 0;
+	}
+		#infoAccesoTitulo p {
+			color: #FFFFFF;
+			font-size: 14px;
+			text-align: center;
+			line-height: 32px;			
+		}
+		#infoAccesoTitulo span.flechaBlanca {
+			width: 6px;
+			height: 11px;
+			background: url("https://simca.unicauca.edu.co/simca/resources/images/flecha-blanca.png") no-repeat;
+			display: inline-block;
+    		margin-left: 5px;
+		}
+	ul.listaInfoAcceso {
+		margin: 0;
+		display: inline-block;
+	}
+	ul.listaInfoAcceso li {
+		margin-bottom: 5px;
+		font-size: 14px;
+		color: #666666;
+	}
+	#infoAccesoTitulo {
+		cursor: pointer !important; /* DUX */
+	}
+
+/***** Boton Cerrar Sesi�n *****/
+/*#botonCerrarSesion, .classBotonCerrarSesion {
+	float: left;
+	display: inline-block;
+	width: 122px;
+	height: 32px;
+	border: 4px solid #E4E4E4;
+	border-radius: 5px;
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-cerrar-sesion.png") no-repeat 100% 50%;
+	background-color: #0E5386;
+	line-height: 32px;
+	color: #FFFFFF;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-right: 10% !important;
+}*/
+
+#botonCerrarSesion, .classBotonCerrarSesion,
+#botonCambiarContrasena, .classBotonCambiarContrasena {
+	/* aristo */
+    /*background-color: rgba(135, 135, 135, 0.2);
+    color: #6C6C6C;/**/
+
+    /* simca2_teal */
+    background-color: rgba(22, 119, 160, 0.14);
+    color: #6C6C6C;/**/
+
+    /* simca2_navy */
+    /*background-color: #4698B6;
+    color: #FFFFFF;/**/
+    
+    border-radius: 5px 5px 5px 5px;
+    color: #6C6C6C;
+    font-size: 14px;
+    line-height: 25px;
+    position: relative;
+    text-align: center;
+    width: 145px;
+    margin-left: 85% !important;
+    display: block;
+    
+    margin-bottom: 10px;
+}
+	/*.classBotonCambiarContrasena
+	{
+		margin-bottom: 10px;
+	}/**/
+	
+	#botonCerrarSesion .icoCerrar,
+	.classBotonCerrarSesion .icoCerrar { 
+		width: 34px;
+		height: 34px;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-cerrar-sesion-new.png") no-repeat;
+		position: absolute;
+		right: -27px;
+		top: -5px;
+	}/**/
+	
+	#botonCambiarContrasena .icoLlave,
+	.classBotonCambiarContrasena .icoLlave { 
+		width: 34px;
+		height: 34px;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-cambiar-contrasena-new.png") no-repeat;
+		position: absolute;
+		right: -27px;
+		top: -5px;
+	}/**/
+
+
+
+
+#botonOpciones {
+	/*height: 33px;*/ /* DUX Para que no se monte el contenido en el men� */
+	width: 159px;
+	border: 4px solid #E4E4E4;
+	border-radius: 5px;
+	float: left;
+	margin-top: 10px;
+}
+	#botonOpciones div.icono {
+		width: 33px;
+		height: 33px;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-opciones.png") no-repeat;
+		float: left;
+	}
+	#botonOpciones div.boton {
+		width: 126px;
+		height: 33px;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/back-btn-opciones.png") no-repeat;
+		float: left;
+		cursor: pointer;
+	}
+	#botonOpciones div.boton p {
+		font-size: 15px;
+		color: #A1A39A;
+		margin-left: 10px;
+		line-height: 33px;
+	}
+	#botonOpciones div.boton span.flechaNegra {
+		width: 6px;
+		height: 10px;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/flecha-negra.png") no-repeat;
+		display: inline-block;
+    	margin-left: 35px;
+	}
+
+/***** Footer *****/
+footer {
+	margin: auto;
+	display: table;
+}
+footer p {
+	font-size: 16px;
+	color: #FFFFFF;
+}
+footer.interno {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 111px;
+}
+footer.interno p {
+	color: #666666;
+	margin: auto;
+	display: table;
+	position: relative;
+	z-index: 1;
+	margin-top: 35px;
+}
+	#banderaFooter {
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/bandera.png") no-repeat;
+		width: 345px;
+		height: 111px;
+		position: absolute;
+		left: 0;
+		z-index: 0;
+	}
+/***** Miscelanea *****/
+div.campo {
+	position: relative;
+}
+div.error {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/btn-error.png") no-repeat;
+	height: 31px;
+    width: 145px;
+    padding-left: 15px;
+    position: absolute;
+}
+	div.error a:link, div.error a:visited {
+		width: 15px;
+		height: 15px;
+		display: block;
+		float: left;
+		background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-cerrar.png") no-repeat;
+		margin: 7px 10px 0 0;
+	}
+	div.error p {
+		font-size: 14px;
+		color: #FFFFFF;
+		line-height: 30px;
+	}
+div.ayuda {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/btn-ayuda.png") no-repeat;
+	height: 31px;
+    width: 145px;
+    padding-left: 15px;
+    position: absolute;
+}
+	div.ayuda p {
+		font-size: 14px;
+		color: #FFFFFF;
+		line-height: 30px;
+	}
+div.campo div.error {
+	top: 0;
+	right: -165px;
+}
+div.campo div.ayuda {
+	top: 0;
+	right: -165px;
+}
+
+.clear {
+	clear: both;
+}
+
+/* #Mensajes Success
+================================================== */
+
+.ui-messages-success {
+	margin: 10px 0px;
+	padding:10px 10px 10px 10px;
+	color: #009B3B;
+	background-color: #BDF8C9 ;
+}
+.ui-messages-success-icon {
+	background: url("https://simca.unicauca.edu.co/simca/resources/images/ico-success.png") no-repeat !important;
+	background-position: 0px -68px;
+	display:block;
+	float:left;
+	margin:0;
+	padding:0;
+	position: relative;
+	height:24px;
+	width:24px;
+	margin-top:-4px;
+}
+.ui-messages-success-summary {
+	margin-left:10px;
+	font-weight:bold;
+}
+.ui-messages-success-detail {
+	margin-left:5px;
+}
+
+/* Tweak for primefaces scrollable datatables */
+.ui-datatable-scrollable-header-box {
+    margin-right: 0px !important; /*originally this is 17px*/
+    padding-right: 16px !important; /*originally this is 40px*/
+ }
+ 
+.ui-datatable-scrollable-body {
+    overflow-y: scroll !important;
+}
+.datatable-scrollable .ui-datatable-tablewrapper{overflow-x:scroll;}
+.datatable-scrollable .ui-datatable-tablewrapper table{table-layout:auto !important;}
+.datatable-scrollable .ui-datatable-tablewrapper td{white-space: nowrap !important;}
+
+/* END Tweak for primefaces scrollable datatables */
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	/*@media only screen and (max-width: 959px) {}/**/
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	/*@media only screen and (min-width: 768px) and (max-width: 959px) {
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+	}/**/
+
+	/* All Mobile Sizes (devices and browser) */
+	/*@media only screen and (max-width: 767px) {
+		#comunicados {
+			display: none;
+		}
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+		header.interno #desc {
+			display: none;
+		}
+	}/**/
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	/*@media only screen and (min-width: 480px) and (max-width: 767px) {
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+
+	}/**/
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	/*@media only screen and (max-width: 479px) {
+		header #desc, header.interno #desc {
+			margin-top: 10px;
+		}
+		header.interno #desc {
+			margin-left: 15px;
+		}
+		footer.interno p {
+			margin-top: 10px;
+			margin-left: 15px;
+		}
+
+		header.interno #logoU {
+			display: none;
+		}
+		header.interno .separador {
+			display: none;
+		}
+
+		#infoUsuario {
+			width: 100%;
+		}
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+
+		#banderaHeader {
+			display: none;
+		}
+		header.interno .logoSimca {
+			margin-right: 10px;
+		}
+	}/**/
+	
+	@media only screen and (max-width: 1200px) {
+		
+	}
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+	}
+
+	@media only screen and (max-width: 890px) {
+		header.interno #desc {
+			display: none;
+		}
+	}	
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		#comunicados {
+			display: none;
+		}
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+		header.interno #desc {
+			display: none;
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+
+	}
+
+	@media only screen and (max-width: 700px) {
+		header.interno #logoU {
+			display: none;
+		}
+		header.interno .separador {
+			display: none;
+		}
+	}	
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		header #desc, header.interno #desc {
+			margin-top: 10px;
+		}
+		header.interno #desc {
+			margin-left: 15px;
+		}
+		footer.interno p {
+			margin-top: 10px;
+			margin-left: 15px;
+		}
+
+		header.interno #logoU {
+			display: none;
+		}
+		header.interno .separador {
+			display: none;
+		}
+
+		.infoUsuario { /* DUX Id a Clase, para usarlo varias veces */
+			width: 100%;
+		}
+		
+		ul.listaInfoUsuario li {
+			padding-right: 10px;
+		}
+
+		#banderaHeader {
+			display: none;
+		}
+		header.interno .logoSimca {
+			margin-right: 10px;
+		}
+	}
+	
+	
+	
+
+
+/* #Font-Face
+================================================== */
+
+	@font-face {
+	    font-family: 'Vegur';
+	    src: url('../fonts/vegur-regular-webfont.eot');
+	    src: url('../fonts/vegur-regular-webfont.eot?iefix') format('eot'),
+	         url('../fonts/vegur-regular-webfont.woff') format('woff'),
+	         url('../fonts/vegur-regular-webfont.ttf') format('truetype'),
+	         url('../fonts/vegur-regular-webfont.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+
+	    
+/* DUX Clases y estilos auxiliares
+================================================== */
+
+.datosContainer
+{
+	/*margin-top: -65px;*/ /* DUX Para mover el container un poco para arriba, que no afecte al bot�n de cerrar sesi�n */
+	/* DUX Inv�lido en el nuevo modelo de botones */
+}
+
+
+/* Shrink a little the font size, so we can work with more space in GUI */
+.ui-widget, 
+.ui-widget .ui-widget
+{
+	/*Para disminuir el tama�o de los botones y text inputs*/
+    font-size: 12px !important;
+}
+
+@media all and (max-width: 979px)
+/* DUX Cuando el tama�o del viewport sea 996px (se pone 979), para todos los medios.
+	Poner todo lo responsive aqu� adentro. */
+{
+	.menuResponsive
+	{
+		float: left;
+		position: relative;
+		left: auto;
+		width: 95% !important;
+	}
+	.contenidoResponsive
+	{
+		width: 97.86% !important;
+	}
+	#infoGeneral
+	{
+		width: 97.86% !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.datosContainer
+	{
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	
+	#infoUsuario2
+	{
+		clear: both;
+		margin-left: 0;
+	}
+	
+	.panelResponsive
+	{
+		clear: both;
+		margin-left: 0 !important;
+		width: 97.86% !important;
+		margin-bottom: 10px !important;
+	}
+	
+	html, body
+	{
+		overflow-x: auto;
+	}
+	footer.interno p
+	{
+		background-color: #D2DFE5;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	.classBotonCerrarSesion, .classBotonCambiarContrasena
+	{
+		position: relative !important;
+		right: 60px !important;/**/
+	}
+	
+	/* DUX Para que se pase para abajo el paso dos en tablets */
+	.columnaDerechaMatricula
+	{
+		clear: both;
+		margin-left: 0 !important;
+		margin-top: 10px !important;
+		width: 95% !important;
+	}
+	.columnaIzquierdaMatricula
+	{
+		width: 95% !important;
+	}
+	
+	.clearBothResponsive
+	{
+		clear: both !important;
+		margin-left: 0 !important;
+		width: auto !important;
+	}
+	#bannerMenuUsuario
+	{
+		display: none;
+	}
+}
+.contenidoResponsive
+{
+	width: 80% !important;
+}
+#infoUsario2
+{
+	clear: none;
+}
+
+
+@media all and (max-width: 1080px) {
+	.panelResponsive
+	{
+		clear: both;
+		margin-left: 0 !important;
+		width: 97.86% !important;
+		margin-bottom: 10px !important;
+	}
+}
+
+@media all and (max-width: 1280px) {
+	.panelResponsiveEvDoc
+	{
+		clear: both;
+		margin-left: 0 !important;
+		width: 97.86% !important;
+		margin-bottom: 10px !important;
+	}
+}
+
+
+/* DUX Estas media queries son para que el tama�o del contenedor principal se ajuste al tama�o de la pantalla:
+	Tama�o - 102 (header) - 111 (footer) */
+
+@media all and (max-height: 1080px) {
+	#infoGeneral {
+		min-height: 768px;
+	}
+}
+@media all and (max-height: 1024px) {
+	#infoGeneral {
+		min-height: 710px;   
+	}
+}
+@media all and (max-height: 900px) {
+	#infoGeneral {
+		min-height: 586px;
+	}
+}
+@media all and (max-height: 800px) {
+	#infoGeneral {
+		min-height: 486px;
+	}
+}
+@media all and (max-height: 768px) {
+	#infoGeneral {
+		min-height: 555px;
+	}
+}
+@media all and (max-height: 600px) {
+	#infoGeneral {
+		min-height: 387px;
+	}
+}
+
+
+/* DUX Para el problema del whitespace a la derecha */
+
+/*
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5)
+{
+
+	html, body {
+	    width:100%;
+	    overflow-x:hidden;
+	}
+
+} */
+
+html, body {
+	width: 100%; 
+	margin: 0px;
+	padding: 0px;
+	/*overflow-x: hidden;*/
+}
+@media all and (max-width: 1080px)
+
+{
+	html, body
+	{
+		overflow-x: auto;
+	}
+}
+
+/*DUX Para que con el nuevo CSS no queden los input text y textareas oscuros*/
+/*.ui-inputfield,
+.ui-inputtext,
+.ui-selectonemenu,
+.ui-chkbok-box
+{
+	background: 0 !important;
+} /**/
+
+/*DUX Para que con el nuevo CSS no queden los input text y textareas oscuros*/
+.ui-inputfield,
+.ui-inputtext,
+.ui-inputfield.ui-state-focus,
+.ui-inputtext.ui-state-focus,
+.ui-inputfield.ui-state-hover,
+.ui-inputtext.ui-state-hover,
+.ui-selectonemenu,
+.ui-chkbok-box
+{
+	background: 0 !important;
+	color: #1A7FA4 !important;
+}
+
+.ui-chkbok-icon.ui-state-active
+{
+	
+	color: yellow !important;
+	
+}
+
+
+/* DUX Para que queden bien los iconos del men� de la izquierda en los templates simca2_color */
+.menuItemDocente .ui-icon,
+.menuItemAdministrativo .ui-icon,
+.estudianteAccordionMenuInterno span.ui-menuitem-icon
+
+{
+	position: static !important;
+}
+
+/* DUX Iconos m�s grandes */
+.ui-widget.ui-button
+{
+	font-size: 14px !important;
+}
+
+/* DUX Estilos para proceso guiado de matr�cula */
+
+.pasoMatricula1
+{
+	background: #e2fd93;
+	/*color: #3B65B1;/**/
+	/*border: #3B65B1 solid 1px;/**/
+}
+	.pasoMatricula1 h1,
+	.pasoMatricula2 h1,
+	.pasoMatricula3 h1,
+	.pasoMatricula4 h1
+	{
+		font-size: 3em;
+	}
+.pasoMatricula2
+{
+	background: #ffea93;
+	/*color: #00AB98;/**/
+	/*border: #00AB98 solid 1px;/**/
+}
+.pasoMatricula3
+{
+	background: #ffbb9d;
+	/*color: #F0632D;/**/
+	/*border: #F0632D solid 1px;/**/
+}
+
+.pasoMatricula4
+{
+	background: #b8c9e2;
+	/*color: #873742;/**/
+	/*border: #873742 solid 1px;/**/
+}
+
+.docenteSeleccionado
+{
+	background:#F6E3CE url("https://simca.unicauca.edu.co/simca/resources/images/edit.png") no-repeat 5px center !important;
+	color: #DF7401;
+	margin: 10px 0px;padding:10px 10px 10px 35px;
+}
+
+span.autocomplete input
+{
+	width:98% !important;
+}
+
+
+ */
+#formBreadCrumb a {
+color: #094F89;
+}
+
+#formBreadCrumb a.ui-state-disabled {
+color: #0A75AB;
+font-weight: bold;
+opacity: 0.6 !important;
+}
+
+
+/* DUX Estilos para el men� de pasos de la matr�cula, a la derecha*/
+
+#menuPasosMatricula
+{
+	position: fixed;
+	height: 190px;
+	width: 38px;
+	z-index: 99997;
+	cursor: move;
+	margin: 0px;
+	top: 200px;
+	right: 0px;
+}
+
+	#menuPasosMatricula img
+	{
+		filter:alpha(opacity=60);
+		-moz-opacity:0.6;
+		-khtml-opacity: 0.6;
+		opacity: 0.6;
+		transition: opacity .25s ease-in-out;
+	   -moz-transition: opacity .25s ease-in-out;
+	   -webkit-transition: opacity .25s ease-in-out;
+	}
+		#menuPasosMatricula img:hover
+		{
+			opacity: 1;
+		}
+	
+	
+	#menuPasosMatricula #flechaPasos
+	{
+		cursor: default;
+	}
+	
+	@media all and (max-width: 1096px)
+	/* DUX Cuando la ventana sea de 1096 correr las im�genes de la matr�cula 15 pixeles a la izquierda. */
+	{
+		#menuPasosMatricula
+		{
+			right: 15px;
+		}
+	}
+
+/* DUX Fila resaltada en la tabla de materias */
+.classAccordionOfertaAcademica tr.ui-state-highlight
+{
+	background: #EfFaFD !important;
+	border: 1px solid #A6C9E2;
+}
+
+/* Victor: Estilos tabla materias oferta acad�mica */
+.classAccordionOfertaAcademica .peque,.classAccordionOfertaAcademica .normal{text-align:center;font-size:0.75em;}
+.classAccordionOfertaAcademica .mat-materia thead tr th:nth-child(1){padding:0px 1px !important;width:20px;} /* Repeticiones */
+.classAccordionOfertaAcademica thead tr th:nth-child(2){padding:0px 1px !important;} /* Semeste */
+.classAccordionOfertaAcademica thead tr th:nth-child(5){padding:0px 1px !important;} /* Cr�ditos */
+
+.classAccordionOfertaAcademica .mat-materia thead tr th:nth-child(6),
+.classAccordionOfertaAcademica .mat-fish thead tr th:nth-child(2){padding:0px 1px !important;width:18px;} /* Checkbox */
+
+.classAccordionOfertaAcademica .mat-materia tbody tr td:nth-child(1),
+.classAccordionOfertaAcademica tbody tr td:nth-child(2),
+.classAccordionOfertaAcademica tbody tr td:nth-child(5),
+.classAccordionOfertaAcademica tbody tr td:nth-child(6)
+{padding:0px 1px !important;text-align:center;}
+
+.classAccordionOfertaAcademica .mat-fish tbody tr td:nth-child(1){padding:4px 5px;}
+.classAccordionOfertaAcademica>div{overflow-y:hidden !important}
+
+.creditos-fish{display:block;height:0;padding:5px 0;position:relative;text-align:right;top:-15px;margin-right:20px;}
+.mat-fish .ui-datatable-tablewrapper{max-height:300px;overflow:auto;}
+a.fish-info{display:inline-block;width:16px;height:16px;background:url(https://simca.unicauca.edu.co/simca/resources/images/info.png);text-decoration:none;opacity:0.6;margin-right:5px;}
+a.fish-info:hover,a.fish-info:focus,a.fish-info:active{opacity:1;}
+.popover{font-size:0.9em;}
+
+/* vizapata: Ajustar los tama�os de columna de las materias de oferta acad�mica seg�n diversos tama�os de pantalla */
+@media all and (max-width: 639px),all and (min-width: 980px) and (max-width: 1279px){ /* columnas peque�as */
+	.classAccordionOfertaAcademica thead tr th:nth-child(2){width:20px;} /* Semestre */
+	.classAccordionOfertaAcademica thead tr th:nth-child(5){width:22px;} /* Cr�ditos */
+	.classAccordionOfertaAcademica .peque{display:auto;}
+	.classAccordionOfertaAcademica .normal{display:none;}
+}
+
+@media all and (min-width: 640px) and (max-width: 979px),all and (min-width: 1280px){ /* columnas normales */
+	.classAccordionOfertaAcademica thead tr th:nth-child(2){width:40px;} /* Semestre */
+	.classAccordionOfertaAcademica thead tr th:nth-child(5){width:40px;} /* Cr�ditos */
+	.classAccordionOfertaAcademica .peque{display:none;}
+	.classAccordionOfertaAcademica .normal{display:auto;}	
+}
+
+
+/*Para definir un ancho al input de consulta estudiante*/
+.input-consulta-estudiante{min-width: 310px !important;}
+
+
+.horario-print{margin-top:10px}
+.pasoMatricula3{margin-bottom:10px;}
+.stick {position:fixed;top:0px;}
+
+@media print{
+	body {
+		background-color: #ffffff !important;
+		background: 0 !important;
+	}
+	#imprimirhorario table td{
+		border: 1px solid black !important;
+		margin: 0 !important;
+		
+		
+	}
+	#imprimirhorario table{
+		border-collapse: collapse !important; 
+		
+	}
+}
+
+.bkcolor{border-radius:10px;display:inline-block;float:left;height:17px;left:3px;position:relative;top:4px;width:17px;border:1px solid #aaa}
+.bkcolor2{display:none;}
+
+button.btnElimMateria{display:none !important;}
+span.btnElimMateria,span.btnElimMateriaDisabled{color:red !important;position:absolute;width:16px;height:16px;right:0px;top:0px;padding:6px;background-image:url(https://simca.unicauca.edu.co/simca/resources/images/delete.png);background-position:0px 0px;background-repeat:no-repeat;}
+span.btnElimMateria:hover{background-position:0px -28px;}
+span.btnElimMateriaDisabled{background:url(https://simca.unicauca.edu.co/simca/resources/images/remove-grayscale.png) center center no-repeat !important;cursor:default !important;}
+
+.boton-quitar-materia ui-icon,
+.boton-quitar-materia:hover
+{
+	background-color:#2e6e40 !important;
+}
+
+.sinBordesInternos tbody,
+.sinBordesInternos tbody tr,
+.sinBordesInternos tbody tr td
+{
+	border: 0 !important;
+}
+
+.panelSinBordes tr, .panelSinBordes td {
+    border: hidden !important;
+}
+
+.laborDocenteAzul
+{
+	background-color: rgb(134, 171, 238) !important;
+	padding:4px !important;
+}
+.laborDocenteRoja
+{
+	background-color: rgb(241, 188, 188) !important;
+	padding:4px !important;
+}
+.laborDocenteVerde
+{
+	background-color: rgb(184, 236, 184) !important;
+	padding:4px !important;
+}
+.laborDocenteBlanca
+{
+	background-color: rgb(255, 255, 255) !important;
+	padding:4px !important;
+}
+.laborDocenteNaranja
+{
+	background-color: rgb(255, 200, 60) !important;
+	padding:4px !important;
+}
+
+.laborDocenteMorada
+{
+	background-color: rgb(211, 160, 218) !important;
+	padding:4px !important;
+}
+
+.textoPregunta{width:100%;max-width:600px;display:block;word-wrap:break-word;white-space:normal !important;margin-bottom:0 !important;}
+
+.submenu-consultasr h3 a {
+	font-size: 19px !important;
+}
+
+.menuitem-consultasr span {
+	font-size: 14px !important;
+}
+
+.botonChat, #chat_button_image, #lz_floating_button
+{
+	/*position: fixed !important;
+	top: 200px !important;*/
+ 	
+	position: fixed; height: 112px; width: 31px; overflow: hidden; z-index: 99997; cursor: pointer; margin: 0px; opacity: 1; bottom: auto; right: auto; left: 0px; top: 336px;
+}
+
+.tabla-pse{margin-top:10px}
+.tabla-pse td{text-align:center}
+
+.controles-left{text-align:left;margin-top:20px}
+.controles{text-align:right;margin-top:20px}
+.controles button+button,.controles-left button+button{margin-left:10px}
+.selectAncho{width:100%}
+
+.upercase-col{text-transform: uppercase;}
+/* Ajustes cr�ditos materias flexibles */
+
+.ui-spinner-input {
+    width: 190px !important;
+    margin-bottom: 0px !important;
+}
+.admitidos .ui-spinner-input {
+    width: 35px !important;
+} 
+
+.ui-spinner-button  {
+    right: -23px !important;
+    width: 23px !important;
+}
+.ui-spinner-button .ui-icon {
+    margin-left: 3px !important;
+}
+.imagenEstudiantePos {
+	padding-right: 111px !important;
+    width: 200px !important;
+}
+
+/*Estilo para ajustar el ancho de la columna y ajustar el contenido del span interno - headertext*/
+.column-wrap span {
+    white-space: normal !important;
+}
+
+/*Estilo para alinear el texto verticalente con la caja de selecci�n - Filtros de busqueda en banco de oferentes*/
+.check-box-text-align {
+    margin-left: 8px;
+    vertical-align: text-bottom;
+}
+
+td.text-right {text-align: right !important;}
+td.text-center {text-align: center !important;}
+
+/*Estilo para ajustar el alto de la fila en el formulario de creación o edición de experiencia en Hoja de Vida Profesor*/
+.rowStyleSpacer{
+    padding: 6px 0px;
+}
+.rowStyleSpacer label{
+    color: #1c3e4a;
+}
+
+/* Estilos gráficos para el separador HR*/
+.subtitulosInternos {
+    text-align: center;
+    font-size: 1.3em;
+    color: #2e6e9e;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.subtitulosInternosLeft {
+    text-align: left;
+    font-size: 1.3em;
+    color: #2e6e9e;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.labelDatosPersonalesHelp {
+    font-size: 1.1em;
+    color:  #179c38;
+    font-weight: 600;
+    margin: 10px;
+}
+
+
+
+
+/* Estilos gráficos utilizados en la Hoja de vida de profesor*/
+.custom-tooltip{
+	background: #99e5a5 !important;
+ 	color: #0A2A0A !important;
+ 	padding: 0px !important;
+
+}
+
+.custom-tooltip p{margin:7px}
+
+.custom-tooltip .title-tooltip{
+	background: #76cc83 !important; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(top, #76cc83, #91E79E) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, #76cc83, #91E79E) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #76cc83, #91E79E) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #76cc83, #91E79E) !important; /* Standard syntax (must be last) */
+	margin: 3px !important;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-weight: 700 !important;
+	padding: 3px 5px;
+}
+
+.calendar90 input{	width: 90%;}
+
+.calendar95 input{	width: 95%;}
+
+.calendar100 input{	width: 100%;}
+
+.selectMenu100{ width:100% !important;}
+
+.selectMenu100 label{ width:100% !important;}
+
+.panel-heading{	color: #09629b !important;}
+
+.wizardEstudio ul li { 
+	margin-top:10px;
+	margin-right: 15px;
+}
+
+.text-email-dp {
+	text-transform: lowercase !important;
+}
+
+.label-requerido {
+    color: #882222;
+    font-size: 1em;
+    margin: 10px;
+}
+/* FIN estilos gráficos utilizados en la Hoja de vida de profesor*/
+
+.ui-autocomplete-panel {
+    max-width: 400px;
+    z-index: 2012;
+    overflow:auto;
+    height: 200px;
+}
+    
+.rowStyleOneRadioLabel label{
+	margin-right: 20px;
+	margin-left: 5px;
+}
+
+
+.ui-autocomplete-panel {
+    max-width: 400px;
+    z-index: 2012;
+    overflow:auto;
+    height: 200px;
+}
+    
+
+/* Estilos admisiones */
+
+table.table-no-border,table.table-no-border>thead>tr>th,table.table-no-border>tbody>tr>td,
+table.table-no-border>tbody>tr,table.table-no-border>thead>tr{border:none}
+.text-md{font-size:1.3em;}
+.text-strong{font-weight:bold}
+a.link{color:#0984e3 !important}
+a.link-danger{color:#ce4844 !important;}
+a.underlined-link{color:#0984e3 !important; text-decoration: underline; display: block;}
+
+button.custom-btn{border-radius:5px;}
+button.custom-btn-xs,div.custom-btn-xs{height:20px;}
+div.custom-btn-xs span.ui-button-text.ui-c {padding: 0 10px;}
+button+button.custom-btn{margin-left:10px !important;}
+button.custom-btn-cancel,button.custom-btn-cancel>span{background-color:#fff !important}
+button.custom-btn-success,button.custom-btn-success>span{background-color:#d4edda !important;border-color:#c3e6cb !important;}
+
+button.custom-btn-warning,button.custom-btn-warning>span{color:#fff;background-color:#f89406;border-color:#c87f0a;transition:background-color .3s ease-in-out}
+button.custom-btn-warning:hover,button.custom-btn-warning:hover>span,button.custom-btn-warning>span:hover{background-color:#c87f0a;}
+
+button.btn-outline-success{
+	border-color: green !important;
+    border-width: 2px !important;
+    background: none !important;
+    color: green !important;
+}
+
+button.btn-outline-danger{
+	border-color: indianred !important;
+    border-width: 2px !important;
+    background: none !important;
+    color: indianred !important;
+}
+
+button.custom-btn-danger,button.custom-btn-danger>span{background-color:#f8d7da !important;border-color:#f5c6cb !important;}
+
+div.spacer20{height:20px}
+div.spacer40{height:40px}
+.imagenAspirante img{height: 87px !important;}
+.casoespecial{display:block;margin-left:10px;font-weight:bold;}
+
+/* Estilos admisiones */
+
+.tablaResultadosIcfes td{
+	text-align:center;
+	max-width: 200px;
+	word-wrap: break-word;
+}
+
+.tablaResultadosIcfes td:nth-child(1){
+	max-width: 150px !important;
+}
+
+.tablaResultadosIcfes td:nth-child(2){
+	max-width: 150px !important;
+}
+
+.tablaResultadosIcfes td:nth-child(3){
+	max-width: 150px !important;
+}
+
+.tablaResultadosIcfes td:nth-child(4){
+	max-width: 150px !important;
+}
+
+.text-jusitify{
+	text-align: justify !important;
+}
+
+.text-right{
+	text-align: right !important;
+}
+
+.estoyseguro{
+	display:block;
+	border:solid 1px #c6e9ff;
+	padding:5px;
+	margin-top:10px; 
+}
+.check-space .ui-radiobutton,.check-space .ui-chkbox{margin-right:5px;}
+.destacar{font-weight:bold;font-size: 1.15em;}
+
+.mensaje-intento-matricula-alerta{
+	background-color: #f8e50678;
+	padding: 20px;
+	border-radius: 4px;
+	display:none;
+}
+
+.smallDatePicker > input{
+	width: 110px !important;
+}
+/* -------------------------------------------------------------------------------------------------------------------
+	Modulo: Gestion de Inscripciones -> Gestion de procesos
+*	Estilos para la tabla que lista los programas ofertados por un proceso de inscripciones 
+*/
+.tabla-oferta-programas tr:focus-within {
+	border: 1px solid #fad42e !important;
+    background: #fbec88 !important;
+}
+.tabla-oferta-programas td>input{width: 80% !important;}
+.tabla-oferta-programas .ui-selectonemenu{width: 100% !important;}
+.tabla-oferta-programas .ui-selectonemenu-label{ width: 100% !important;}
+.tabla-oferta-programas td:nth-child(1), .tabla-oferta-programas th{	
+	word-wrap: break-word !important;
+	white-space:normal !important;
+}
+
+.tabla-oferta-programas td:not(:nth-child(1)):not(:nth-child(3)), .tabla-oferta-programas input{text-align: center;}
+.tabla-oferta-programas td:nth-child(1){ width: 180px !important;}
+.tabla-oferta-programas td:nth-child(2){ width: 40px !important;}
+.tabla-oferta-programas td:nth-child(3){ width: 110px !important; min-width: 110px !important;}
+.tabla-oferta-programas td:nth-child(4),
+.tabla-oferta-programas td:nth-child(5){ width: 130px !important;}
+.tabla-oferta-programas td:nth-child(6),
+.tabla-oferta-programas td:nth-child(7),
+.tabla-oferta-programas td:nth-child(8),
+.tabla-oferta-programas td:nth-child(9){ width: 80px !important;} 
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/* -------------------------------------------------------------------------------------------------------------------
+	Modulo: Gestion de Inscripciones -> Gestion de procesos -> Editar Ponderados
+*	Estilos para la tabla que permite editar los ponderados de cada programa 
+*/
+
+.tabla-editar-ponderados tr:focus-within {
+	border: 1px solid #fad42e !important;
+    background: #fbec88 !important;
+}
+.tabla-editar-ponderados td input{width: 80% !important;}
+.tabla-editar-ponderados .ui-selectonemenu{width: 100% !important;}
+.tabla-editar-ponderados .ui-selectonemenu-label{ width: 100% !important;}
+.tabla-editar-ponderados td:nth-child(1), .tabla-editar-ponderados th{	
+	word-wrap: break-word !important;
+	white-space:normal !important;
+}
+
+.tabla-editar-ponderados td:not(:nth-child(1)), .tabla-editar-ponderados input{text-align: center;}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.tblVoto td:nth-child(even){padding:3px 20px 3px 8px}
+.bloqueProg:nth-child(2){border-left:solid 1px #333;padding-left:5px;}
+.pnl-vd td {padding: 1px 0px 0px 6px !important;}
+
+/* INICIO: Verificación requisitos Listas admitidos */
+ul.lista-verificacion {list-style: none;margin: 10px 0;}
+ul.lista-verificacion>li{padding-left:30px;font-weight:bold;background-image:url(https://simca.unicauca.edu.co/simca/resources/images/mensajes.png);background-repeat:no-repeat;height:24px;line-height:25px;margin:4px 0}
+ul.lista-verificacion>li.item-warning{color: darkorange;background-position:0 -312px;}
+ul.lista-verificacion>li.item-ok {color: darkgreen;background-position:0 -136px;}
+ul.lista-verificacion>li.item-error{color: darkred;background-position:0 -48px;}
+
+.tblConfig span {display: block;margin: 0;padding: 0;}
+
+table .col-16{width:16px !important;}
+table .col-24{width:24px !important;}
+table .col-32{width:32px !important;}
+table .col-48{width:45px !important;}
+table .col-64{width:64px !important;}
+table .col-80{width:80px !important;}
+table .col-128{width:128px !important;}
+table .col-144{width:144px !important;}
+table .col-192{width:192px !important;}
+table .col-256{width:256px !important;}
+
+/* INICIO Estilos matrícula primer semestre */
+.mps-panel{padding-left:10px}
+.mps-panel td, .mps-materia th{padding: 1px 5px !important;}
+.mps-panel tr>td:first-child {padding: 4px 0px 0px !important;}
+.mps-materia{margin-bottom: 25px;}
+.mps-materia .ui-chkbox-box{border-radius: 50% !important;}
+.mps-materia tr>td:nth-child(n+3){text-align:right !important;}
+.mps-materia tr.sin-cupo td{opacity:0.8;font-style:italic;color: #777;background: #eee;}
+.mps-materia tr.sin-cupo td:last-child{color:#f33;}
+.mps-materia table td {font-family: monospace;}
+
+.mps-materia h3 {font-size: unset;line-height: 2.3;}
+.mps-materia span.bkcolor {margin-right:10px;}
+.mps-panel .lista{max-height:100%;overflow-y:scroll;}
+.mps-panel .lista1{height:600px;}
+.mps-panel .lista2{height:700px;}
+.horarioMatricula{padding:20px;margin:40px 20px;max-width: 800px;margin: 0 auto;}
+.grpPrematricula .ui-datatable .ui-datatable-data td{padding:2px !important}
+.cruce{
+	color:#f00 !important;
+	background:#F2DEDE !important;
+	font-weight:bolder !important;
+	outline:solid 2px #f00;
+}
+.btn-borrar-matricula{
+	margin: 15px;
+}
+
+.mps-panel .input2{max-width:80%}
+button.input2, button.input2>span {padding: 1px;font-size: 0.9em;font-weight: normal;}
+@media (min-width:1080px) {.label-full{display:block !important;}.label-short{display:none !important;}}
+@media (max-width:1081px) {.label-full{display:none !important;}.label-short{display:block !important;}}
+
+/* FIN Estilos matrícula primer semestre */
+
+.tblAsig{max-height:500px;overflow-y:auto}
+
+.flex{
+	display: flex;
+	gap: 2px;
+	flex-direction: row;
+}
+.flex-column{
+	flex-direction: column;
+}
+.flex-row{
+	flex-direction: row;
+}
+.gap-5{
+	gap: 5px
+}
+.gap-10{
+	gap: 10px
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+.justify-content-end{
+	justify-content: end;
+}
+.align-self-center{
+  align-self: center;
+}
+
+.my-2{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.programas-gratuidad-chips {
+	display: flex;
+	gap: 5px;
+}
+
+.chip-icon {
+	display: inline-block;
+	min-width: 24px;
+	min-height: 24px;
+	background: #fff;
+	background-image: url("https://simca.unicauca.edu.co/simca/resources/images/icon-close.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 50%;
+}
+
+.chip {
+	max-height: 24px;
+	background-color: #f2dede;
+	border-radius: 20px;
+	border:solid 1px;
+  border-color: #eed3d7;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+
+.chip-active {
+	background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.chip-icon.chip-icon-gratuidad {
+	background-image: url("https://simca.unicauca.edu.co/simca/resources/images/icon-check.png");
+}
+
+.btn-icon-only {
+  height: 20px;
+  width: fit-content !important;
+}

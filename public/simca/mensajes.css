@@ -1,0 +1,165 @@
+/***** Comunicados *****/
+#comunicados {
+	float: left;
+	margin: 0 20px 0 0;
+	width: 94%;
+}
+#comunicados .comunicado {
+	width: 100%;
+	/*height: 106px;*/
+	background-color: rgba(255,255,255,0.2);
+	display: block;
+	margin-bottom: 10px;
+	padding: 00px;
+	height: auto;
+	
+}
+	#comunicados .comunicado .alerta, #comunicados .comunicado .restriccion,
+	#comunicados .comunicado .informacion,
+	#comunicados .comunicado .noticia
+	{
+		padding: 8px;
+		/*min-height: 100px;*/
+		height: auto;
+	}
+	#comunicados .comunicado .alerta {
+		width: 100%;
+		/*height: 76px;*/
+		border: 4px solid #FFFFFF;
+		/*background: url("../images/back-comu-i.png") no-repeat;*/
+		background: #F6E9CF;
+		
+	}
+		#comunicados .comunicado .alerta .icoAlerta {
+			background: url("../images/ico-alert-small.png") no-repeat;
+			width: 26px;
+			height: 24px;
+			float: left;
+			margin-right: 10px;
+		}
+		#comunicados .comunicado .alerta h5 {
+			font-size: 15px;
+			line-height: 16px;
+    		margin-bottom: 5px;
+    		color: #3F2007;
+		}
+		#comunicados .comunicado .alerta p {
+			font-size: 12px;
+			line-height: 14px;
+			color: #A47015;
+		}
+			#comunicados .comunicado .alerta p a{
+				font-size: 12px;
+				line-height: 14px;
+				color: #A47015;
+				text-decoration: underline;
+			}
+	#comunicados .comunicado .restriccion {
+		width: 100%;
+		/*height: 76px;*/
+		border: 4px solid #FFFFFF;
+		/*background: url("../images/back-comu-ii.png") no-repeat;*/
+		background: #FCDEDC;
+	}
+		#comunicados .comunicado .restriccion .icoStop {
+			background: url("../images/ico-stop-small.png") no-repeat;
+			width: 35px;
+			height: 35px;
+			margin: 0 1px 0 0;
+			float: left;
+		}
+		#comunicados .comunicado .restriccion h5 {
+			font-size: 15px;
+			line-height: 16px;
+    		margin-bottom: 5px;
+    		color: #530A06;
+		}
+		#comunicados .comunicado .restriccion p {
+			font-size: 12px;
+			line-height: 14px;
+			color: #DF5F58;
+		}
+			#comunicados .comunicado .restriccion p a {
+				font-size: 12px;
+				line-height: 14px;
+				color: #DF5F58;
+				text-decoration: underline;
+			}
+	
+	/* DUX Clases y ids nuevos para un aviso informativo */
+	
+	#comunicados .comunicado .informacion {
+		width: 100%;
+		/*height: 76px;*/
+		border: 4px solid #FFFFFF;
+		/*background: url("../images/back-comu-ii.png") no-repeat;*/
+		background: #e4ecf4;
+	}
+		#comunicados .comunicado .informacion .icoInfo {
+			background: url("../images/ico-info-small.png") no-repeat;
+			width: 28px;
+			height: 28px;
+			margin: 0 5px 0 0;
+			float: left;
+		}
+		#comunicados .comunicado .informacion h5 {
+			font-size: 15px;
+			line-height: 16px;
+    		margin-bottom: 5px;
+    		margin-top: 5px;
+    		color: #143b85;
+		}
+		#comunicados .comunicado .informacion p {
+			font-size: 12px;
+			line-height: 14px;
+			color: #1368bd;
+		}
+			#comunicados .comunicado .informacion p a {
+				font-size: 12px;
+				line-height: 14px;
+				color: #1368bd;
+				text-decoration: underline;
+			}
+
+
+	#comunicados .comunicado .noticia {
+		width: 100%;
+		/*height: 76px;*/
+		border: 4px solid #FFFFFF;
+		/*background: url("../images/back-comu-ii.png") no-repeat;*/
+		background: #d7dbdc;
+	}
+		#comunicados .comunicado .noticia .icoNoticia {
+			background: url("../images/ico-noticia.png") no-repeat;
+			width: 52px;
+			height: 29px;
+			margin-right: 10px;
+			float: left;
+			margin-right: 10px;/**/
+			position: relative;
+			top: -25px;
+			left: -10px;
+			margin-bottom: -15px;
+		}
+		#comunicados .comunicado .noticia h5 {
+			clear: both;
+			font-size: 15px;
+			line-height: 16px;
+    		margin-bottom: 5px;
+    		color: #333333;
+		}
+		#comunicados .comunicado .noticia p {
+			font-size: 12px;
+			line-height: 14px;
+			color: #666666;
+		}
+			#comunicados .comunicado .noticia p a {
+				font-size: 12px;
+				line-height: 14px;
+				color: #666666;
+				text-decoration: underline;
+			}
+
+/**
+ * Media Queries para ocultar los iconos en determinados tamaños.
+ */

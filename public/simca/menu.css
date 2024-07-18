@@ -1,0 +1,79 @@
+/*!
+ * menu.css
+ *
+ * Copyright 2013 Unicauca 
+ *
+ */
+.imagen-estudiante {
+	background-image: url('../images/birrete.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: left !important;
+}
+
+.imagen-programa {
+	background-image: url('../images/book.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: left !important;
+}
+
+.accordionMenu .ui-accordion-content {
+	padding: 0px !important;
+}
+
+.ui-accordion .ui-accordion-content {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.accordionMenu .ui-helper-clearfix:after {
+	height: inherit !important;
+	width: inherit !important;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+	position: absolute !important;
+	right: .5em !important;
+	top: 50% !important;
+	margin-top: -8px !important;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+	left: auto !important;
+}
+
+/*DUX Correcciones para el menú*/
+.docenteMenuPanel,
+.estudianteMenuPanel
+ {
+	border: 0px !important;
+}
+
+/* DUX Acceso al id del div estáticamente. No tiene referencia desde Primefaces usando styleClass. */
+div#j_idt108\:docentepnl_content,
+div#j_idt108\:estudiantepnl_content {
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.estudianteAccordion div.ui-accordion-content
+{
+	padding: 8px 0 8px 2px !important;
+	overflow: hidden;
+	border: 0 !important;/**/
+}
+
+.estudianteAccordion .ui-accordion-header
+{
+	border-bottom-left-radius: 5px !important;
+	border-bottom-right-radius: 5px !important;	
+}
+
+.estudianteMenuPanel .ui-panel-titlebar,
+.docenteMenuPanel .ui-panel-titlebar,
+.administrativoMenuPanel .ui-panel-titlebar
+{
+	cursor: pointer !important;
+}
