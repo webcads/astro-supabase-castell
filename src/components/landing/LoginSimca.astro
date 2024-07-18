@@ -1,0 +1,226 @@
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="description" />
+  <meta name="author" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  />
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="/public/SIMCA_files/base.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/public/SIMCA_files/skeleton.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/public/SIMCA_files/bootstrap-responsive.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/public/SIMCA_files/bootstrap.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/public/SIMCA_files/application.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/public/SIMCA_files/estilos.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/public/SIMCA_files/jquery.reject.css"
+  />
+
+  <title>SIMCA</title>
+  <body>
+    <div id="antorcha"></div>
+    <div id="bandera"></div>
+
+    <header>
+      <a href="http://www.unicauca.edu.co" id="logoU"></a>
+      <p class="separador"></p>
+      <p id="desc">Sistema Integrado de Matrícula y Control Académico</p>
+    </header>
+    <div class="container">
+      <span id="mensaje"></span>
+      <div id="general">
+        <div id="login">
+          <div id="logoSimca"></div>
+          <h3>Iniciar Sesión</h3>
+          <form
+            id="j_idt13"
+            name="j_idt13"
+            method="post"
+            action="/simca/index.xhtml"
+            enctype="application/x-www-form-urlencoded"
+          >
+            <input type="hidden" name="j_idt13" value="j_idt13" />
+
+            <fieldset>
+              <div class="campo">
+                <input
+                  id="j_idt13:userName"
+                  name="j_idt13:userName"
+                  type="text"
+                  aria-required="true"
+                  class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all userNameClass"
+                  role="textbox"
+                  aria-disabled="false"
+                  aria-readonly="false"
+                />
+                <div class="error" style="display: none;" id="msgErrorUsuario">
+                  <p>Usuario requerido</p>
+                </div>
+              </div>
+              <div class="campo">
+                <input
+                  id="j_idt13:password"
+                  name="j_idt13:password"
+                  type="password"
+                  class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all passwordClass"
+                  aria-required="true"
+                  role="textbox"
+                  aria-disabled="false"
+                  aria-readonly="false"
+                />
+                <div
+                  class="error"
+                  style="display: none;"
+                  id="msgErrorContrasena"
+                >
+                  <p>Contraseña requerida</p>
+                </div>
+              </div><button
+                id="j_idt13:botonIngresar"
+                name="j_idt13:botonIngresar"
+                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only botonIngresarClass"
+                onclick="return validar();;"
+                type="submit"
+                role="button"
+                aria-disabled="false"
+                ><span class="ui-button-text ui-c">Ingresar</span></button
+              >
+            </fieldset><input
+              type="hidden"
+              name="javax.faces.ViewState"
+              id="javax.faces.ViewState"
+              value="-2521262077511000364:-149227905565003082"
+              autocomplete="off"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        2024 | División de Tecnologías de la Información y las Comunicaciones <br
+        />
+        <a href="http://www.unicauca.edu.co">Universidad del Cauca</a>
+        | <a href="mailto:simca@unicauca.edu.co">simca@unicauca.edu.co</a><br
+        />Versión: v2.5.43
+      </p>
+    </footer>
+
+    <script type="text/javascript">
+      // <![CDATA[
+      console.log("SIMCA, Versión", "v2.5.43", "(ccbd8fb)");
+      // ]]>
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("input[id$=userName]").focus();
+        if (navigator.userAgent.indexOf("Trident/7.0;") > -1)
+          console.log("IE11 Detectado");
+        else $.reject(rejectOptions);
+        return false;
+      });
+    </script>
+    <script type="text/javascript">
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-53537768-1", "auto");
+      ga("send", "pageview");
+    </script>
+
+    <div id="livezilla_tracking" style="display: none">
+      <script
+        async=""
+        type="text/javascript"
+        src="https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&rqst=track&output=jcrpt&intgroup=Y29udGFjdG8_&hg=P0luc2NyaXBjaW9uZXM_&fbpos=10&fbml=0&fbmt=0&fbmr=0&fbmb=0&fbw=31&fbh=112&nse=0.8913459170614983"
+      ></script>
+    </div>
+    <script type="text/javascript">
+      var script = document.createElement("script");
+      script.async = true;
+      script.type = "text/javascript";
+      var src =
+        "https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&rqst=track&output=jcrpt&intgroup=Y29udGFjdG8_&hg=P0luc2NyaXBjaW9uZXM_&fbpos=10&fbml=0&fbmt=0&fbmr=0&fbmb=0&fbw=31&fbh=112&nse=" +
+        Math.random();
+      setTimeout(
+        "script.src=src;document.getElementById('livezilla_tracking').appendChild(script)",
+        1
+      );
+    </script>
+    <noscript>
+      <img
+        src="https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&rqst=track&output=nojcrpt"
+        width="0"
+        height="0"
+        style="visibility: hidden;"
+      />
+    </noscript>
+    <div style="display: none;">
+      <a
+        href="javascript:lz_tracking_init_floating_button_selector(new Array(true,false,'','',false,true,true,'','','','','','','','&intgroup=Y29udGFjdG8_&hg=P0luc2NyaXBjaW9uZXM_'));"
+        class="lz_fl"
+        ><img
+          id="chat_button_image"
+          src="https://chat.unicauca.edu.co/chatsimca/image.php?a=f4f89&id=1&type=overlay&hg=P0luc2NyaXBjaW9uZXM_"
+          width="31"
+          height="112"
+          style="border: 0px;"
+          alt="LiveZilla Live Chat Software"
+        /></a
+      >
+    </div>
+
+    <div
+      id="textarea_simulator"
+      style="position: absolute; top: 0px; left: 0px; visibility: hidden;"
+    >
+    </div><div
+      id="mensaje_container"
+      class="ui-growl ui-widget"
+      style="z-index: 1001;"
+    >
+    </div>
+  </body>
+</html>

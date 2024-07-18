@@ -3,16 +3,20 @@
 
 import Splash from "../components/landing/Splash.astro"
 import ThemeIcon from "../components/ui/ThemeIcon.astro"
+import LoginSimca from "../components/landing/LoginSimca.astro"
 import LayoutGuest from "../layout/layoutGuest.astro";
+import SimcaLayout from "../layout/SimcaLayout.astro";
 export const prerender = true;
 const title = "Unikit aplicacion web ";
 ---
 
-<LayoutGuest title={title}>     
+<!-- <SimcaLayout title={title}>      -->
 
-  <Splash title={title}></Splash>
-  <div class="fixed bottom-6 right-6">
+  <!-- <Splash title={title}></Splash> -->
+  <!-- <div class="fixed bottom-6 right-6">
     <ThemeIcon />
-  </div>
+  </div> -->
+
+  <LoginSimca></LoginSimca>
   
-</LayoutGuest>
+<!-- </SimcaLayout> -->

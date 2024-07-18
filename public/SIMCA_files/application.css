@@ -1,0 +1,83 @@
+html, body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push, #footer {
+	height: 60px;
+}
+
+#footer {
+	margin-top: 15px;
+	background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media ( max-width : 767px) {
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* The white background content wrapper */
+.container > .content {
+	background-color: #fff;
+	padding: 20px;
+	margin: 0 -20px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.login-form {
+	z-index: 20;
+}
+
+legend {
+	margin-right: -50px;
+	font-weight: bold;
+	color: #404040;
+}
+
+.estudianteAccordion .ui-accordion-header.ui-state-active,
+.estudianteAccordion .ui-accordion-header.ui-state-hover
+{
+	/*background-color: #85B2CB !important;*/
+	background-color: #a5d2eB !important;
+	color: #1F455A !important;
+}
+	.estudianteAccordion .ui-accordion-header.ui-state-active a,
+	.estudianteAccordion .ui-accordion-header.ui-state-hover a
+	{
+		color: #1F455A !important;
+	}
+	
+/*
+Used for diferents status messages
+*/
+.estado-estudiante{
+	font-size:1.5em;
+	font-weight:bold;
+	color:#B94A48;
+}
+.estado-activo{
+	color:#468847;
+}
+.menuUsuario .ui-menu{width:inherit !important;}
+.menuUsuario table {width: 100%;}
