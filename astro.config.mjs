@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import { fileURLToPath } from 'url';
 // import vercel from "@astrojs/vercel/serverless";
+import netlify from '@astrojs/netlify';
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 
@@ -8,9 +9,9 @@ import solidJs from "@astrojs/solid-js";
 //vercell added
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-supabase-castell.vercel.app",
+  // site: "https://astro-supabase-castell.vercel.app",
   output: "server",
-  
+  adapter: netlify(),
   integrations: [   tailwind({
     // Example: Provide a custom path to a Tailwind config file
     configFile: fileURLToPath(new URL('./tailwind.config.cjs', import.meta.url)),
