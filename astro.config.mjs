@@ -10,7 +10,7 @@ import solidJs from "@astrojs/solid-js";
 export default defineConfig({
   site: "https://astro-supabase-castell.vercel.app",
   output: "server",
-  adapter: vercel(),
+  
   integrations: [   tailwind({
     // Example: Provide a custom path to a Tailwind config file
     configFile: fileURLToPath(new URL('./tailwind.config.cjs', import.meta.url)),
