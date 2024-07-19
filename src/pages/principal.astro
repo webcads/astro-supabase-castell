@@ -1,355 +1,636 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/bootstrap-responsive.css.xhtml?ln=css"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/bootstrap.css.xhtml?ln=css"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/application.css.xhtml?ln=css"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&amp;v=5.3"><script type="text/javascript" src="/simca/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=5.3"></script><script type="text/javascript" src="/simca/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=5.3"></script><script type="text/javascript" src="/simca/javax.faces.resource/primefaces.js.xhtml?ln=primefaces&amp;v=5.3"></script><script type="text/javascript" src="/simca/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml?ln=primefaces&amp;v=5.3"></script><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/table-content.css.xhtml?ln=css"><script type="text/javascript">if(window.PrimeFaces){}</script>
-	<meta charset="UTF-8" />
-	<title>SIMCA 2.0</title>
-	<meta name="description">
-	<meta name="author">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head
+    ><link
+      type="text/css"
+      rel="stylesheet"
+      href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"
+    /><link
+      type="text/css"
+      rel="stylesheet"
+      href="/simca/javax.faces.resource/bootstrap-responsive.css.xhtml?ln=css"
+    /><link
+      type="text/css"
+      rel="stylesheet"
+      href="/simca/javax.faces.resource/bootstrap.css.xhtml?ln=css"
+    /><link
+      type="text/css"
+      rel="stylesheet"
+      href="/simca/javax.faces.resource/application.css.xhtml?ln=css"
+    /><link
+      type="text/css"
+      rel="stylesheet"
+      href="/simca/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&v=5.3"
+    /><script
+      type="text/javascript"
+      src="/simca/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&v=5.3"
+    ></script><script
+      type="text/javascript"
+      src="/simca/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&v=5.3"
+    ></script><script
+      type="text/javascript"
+      src="/simca/javax.faces.resource/primefaces.js.xhtml?ln=primefaces&v=5.3"
+    ></script><script
+      type="text/javascript"
+      src="/simca/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml?ln=primefaces&v=5.3"
+    ></script><link
+      type="text/css"
+      rel="stylesheet"
+      href="/simca/javax.faces.resource/table-content.css.xhtml?ln=css"
+    /><script type="text/javascript">
+      if (window.PrimeFaces) {
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <title>SIMCA 2.0</title>
+    <meta name="description" />
+    <meta name="author" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	
-	<link rel="shortcut icon" href="favicon.png">
-	<link rel="stylesheet" type="text/css" href="/public/simca/estilos-interna.css"><!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script> <![endif]--><script type="text/javascript">
-   		$ = jQuery;
-	</script><script type="text/javascript" src="/simca/javax.faces.resource/bootstrap.min.js.xhtml?ln=js"></script>
-	<title>SIMCA</title><style id="mttstyle">
-    #mttContainer {
-      left: 0 !important;
-      top: 0 !important;
-      width: 1000px !important;
-      margin: 0px !important;
-      margin-left: -500px !important;
-      position: fixed !important;
-      z-index: 100000200 !important;
-      background: none !important;
-      pointer-events: none !important;
-      display: inline-block !important;
-      visibility: visible  !important;
-      white-space: pre-line;
-    }
-    .tippy-box[data-theme~="custom"], .tippy-content *{
-      font-size: 14px  !important;
-      text-align: center !important;
-      overflow-wrap: break-word !important;
-      color: #ffffffff !important;
-      font-family: 
-        -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif  !important;
-      white-space: pre-line;
-    }
-    .tippy-box[data-theme~="custom"]{
-      max-width: 200px  !important;
-      backdrop-filter: blur(4px) !important;
-      background-color: #000000b8 !important;
-      border: 1px solid #ffffff00; 
-    }
-    [data-tippy-root] {
-      display: inline-block !important;
-      visibility: visible  !important;
-      position: absolute !important;
-    }
-    .tippy-box[data-theme~='custom'][data-placement^='top'] > .tippy-arrow::before { 
-      border-top-color: #000000b8 !important;
-    }
-    .tippy-box[data-theme~='custom'][data-placement^='bottom'] > .tippy-arrow::before {
-      border-bottom-color: #000000b8 !important;
-    }
-    .tippy-box[data-theme~='custom'][data-placement^='left'] > .tippy-arrow::before {
-      border-left-color: #000000b8 !important;
-    }
-    .tippy-box[data-theme~='custom'][data-placement^='right'] > .tippy-arrow::before {
-      border-right-color: #000000b8 !important;
-    }
-    .mtt-highlight{
-      background-color: #21dc6d40  !important;
-      position: absolute !important;   
-      z-index: 100000100 !important;
-      pointer-events: none !important;
-      display: inline !important;
-      border-radius: 3px !important;
-    }
-    .mtt-image{
-      width: 180px  !important;
-      border-radius: 3px !important;
-    }
-    .ocr_text_div{
-      position: absolute;
-      opacity: 0.5;
-      color: transparent !important;
-      border: 2px solid CornflowerBlue;
-      background: none !important;
-      border-radius: 3px !important;
-    }</style><style id="mttstyleSubtitle">
-    #ytp-caption-window-container .ytp-caption-segment {
-      cursor: text !important;
-      user-select: text !important;
-      font-family: 
-      -apple-system, BlinkMacSystemFont,
-      "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans",
-      "Droid Sans", "Helvetica Neue", sans-serif  !important;
-    }
-    .caption-visual-line{
-      display: flex  !important;
-      align-items: stretch  !important;
-    }
-    .captions-text .caption-visual-line:first-of-type:after {
-      content: '⣿⣿';
-      background-color: #000000b8;
-      display: inline-block;
-      vertical-align: top;
-      opacity:0;
-      transition: opacity 0.7s ease-in-out;
-    }
-    .captions-text:hover .caption-visual-line:first-of-type:after {
-      opacity:1;
-    }
-    .ytp-pause-overlay {
-      display: none !important;
-    }
-    .ytp-expand-pause-overlay .caption-window {
-      display: block !important;
-    }
-  </style></head><body class="interno">
-	<header class="interno">
-		<div id="logoU"></div>
-		<div class="separador"></div>
-		<p id="desc">Sistema Integrado de Matrícula y Control Académico.</p>
-		<div class="logoSimca"></div>
-		<div id="banderaHeader"></div>
-		<div class="clear"></div>
-	</header>
-	<div class="container-fluid interno"><span id="msgPrincipal"></span><div id="j_idt16" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable ui-resizable" role="dialog" aria-labelledby="j_idt16_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="j_idt16_title" class="ui-dialog-title">Advertencia de sesión</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">Su sesión finalizará en 20 minutos por inactividad.</div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div></div>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/public/simca/estilos-interna.css"
+    /><!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script> <![endif]-->
+    <script type="text/javascript">
+      $ = jQuery;
+    </script><script
+      type="text/javascript"
+      src="/simca/javax.faces.resource/bootstrap.min.js.xhtml?ln=js"></script>
+    <title>SIMCA</title><style id="mttstyle">
+      #mttContainer {
+        left: 0 !important;
+        top: 0 !important;
+        width: 1000px !important;
+        margin: 0px !important;
+        margin-left: -500px !important;
+        position: fixed !important;
+        z-index: 100000200 !important;
+        background: none !important;
+        pointer-events: none !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        white-space: pre-line;
+      }
+      .tippy-box[data-theme~="custom"],
+      .tippy-content * {
+        font-size: 14px !important;
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+        color: #ffffffff !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif !important;
+        white-space: pre-line;
+      }
+      .tippy-box[data-theme~="custom"] {
+        max-width: 200px !important;
+        backdrop-filter: blur(4px) !important;
+        background-color: #000000b8 !important;
+        border: 1px solid #ffffff00;
+      }
+      [data-tippy-root] {
+        display: inline-block !important;
+        visibility: visible !important;
+        position: absolute !important;
+      }
+      .tippy-box[data-theme~="custom"][data-placement^="top"]
+        > .tippy-arrow::before {
+        border-top-color: #000000b8 !important;
+      }
+      .tippy-box[data-theme~="custom"][data-placement^="bottom"]
+        > .tippy-arrow::before {
+        border-bottom-color: #000000b8 !important;
+      }
+      .tippy-box[data-theme~="custom"][data-placement^="left"]
+        > .tippy-arrow::before {
+        border-left-color: #000000b8 !important;
+      }
+      .tippy-box[data-theme~="custom"][data-placement^="right"]
+        > .tippy-arrow::before {
+        border-right-color: #000000b8 !important;
+      }
+      .mtt-highlight {
+        background-color: #21dc6d40 !important;
+        position: absolute !important;
+        z-index: 100000100 !important;
+        pointer-events: none !important;
+        display: inline !important;
+        border-radius: 3px !important;
+      }
+      .mtt-image {
+        width: 180px !important;
+        border-radius: 3px !important;
+      }
+      .ocr_text_div {
+        position: absolute;
+        opacity: 0.5;
+        color: transparent !important;
+        border: 2px solid CornflowerBlue;
+        background: none !important;
+        border-radius: 3px !important;
+      }
+    </style><style id="mttstyleSubtitle">
+      #ytp-caption-window-container .ytp-caption-segment {
+        cursor: text !important;
+        user-select: text !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif !important;
+      }
+      .caption-visual-line {
+        display: flex !important;
+        align-items: stretch !important;
+      }
+      .captions-text .caption-visual-line:first-of-type:after {
+        content: "⣿⣿";
+        background-color: #000000b8;
+        display: inline-block;
+        vertical-align: top;
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+      }
+      .captions-text:hover .caption-visual-line:first-of-type:after {
+        opacity: 1;
+      }
+      .ytp-pause-overlay {
+        display: none !important;
+      }
+      .ytp-expand-pause-overlay .caption-window {
+        display: block !important;
+      }
+    </style></head
+  ><body class="interno ">
+    <header class="interno">
+      <div id="logoU"></div>
+      <div class="separador"></div>
+      <p id="desc">Sistema Integrado de Matrícula y Control Académico.</p>
+      <div class="logoSimca"></div>
+      <div id="banderaHeader"></div>
+      <div class="clear"></div>
+    </header>
 
-		<div><div id="j_idt20" class="ui-outputpanel ui-widget">
-	
-<form id="formBreadCrumb" name="formBreadCrumb" method="post" action="/simca/principal.xhtml" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="formBreadCrumb" value="formBreadCrumb">
-<div id="formBreadCrumb:j_idt22" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="toggleMenuEstudiante();PrimeFaces.ab({s:&quot;formBreadCrumb:j_idt23&quot;,f:&quot;formBreadCrumb&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-carat-1-e"></span><span class="ui-menuitem-text">Estudiante</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="toggleAccordionText('Ingeniería de Sistemas');PrimeFaces.ab({s:&quot;formBreadCrumb:j_idt24&quot;,f:&quot;formBreadCrumb&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-carat-1-e"></span><span class="ui-menuitem-text">Ingeniería de Sistemas</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all ui-state-disabled" href="#" onclick="return false;"><span class="ui-menuitem-icon ui-icon ui-icon-carat-1-e"></span><span class="ui-menuitem-text">Materias</span></a></li><li class="ui-menuitem ui-menubar-options ui-widget ui-corner-all" role="menuitem"><div id="formBreadCrumb:j_idt36" class="ui-splitbutton ui-buttonset ui-widget"><button id="formBreadCrumb:j_idt36_button" name="formBreadCrumb:j_idt36_button" class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-power"></span><span class="ui-button-text ui-c">Cerrar Sesión</span></button><button id="formBreadCrumb:j_idt36_menuButton" name="formBreadCrumb:j_idt36_menuButton" type="button" class="ui-splitbutton-menubutton  ui-button ui-widget ui-state-default ui-corner-right ui-button-icon-only" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text ui-c">ui-button</span></button></div></li></ul></div>
-<input type="hidden" name="javax.faces.ViewState" value="-182752667817866983:-2311355016609886998" autocomplete="off"></form>
-	</div>
+	<div class="container p-6 pt-0">
+		<div class="p-1 pl-2 pr-2 mb-5 border border-[#a6c9e2] rounded-md flex flex-col bg-[#fdfdfd]"  >
+			<nav class="flex pt-2" aria-label="Breadcrumb">
+				<ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+				  <li class="inline-flex items-center">
+					<a href="#" class="inline-flex items-center text-[12px] font-light text-[#222222] hover:text-blue-600">
+						<svg class="rtl:rotate-180 w-1.5 h-1.5 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+							<path stroke="#499ddd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+						  </svg>
+					  Estudiante
+					</a>
+				  </li>
+				  <li>
+					<div class="flex items-center">
+					  <svg class="rtl:rotate-180 w-1.5 h-1.5 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+						<path stroke="#499ddd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+					  </svg>
+					  <a href="#" class="ms-1 text-[12px] font-light text-[#222222] hover:text-blue-600 md:ms-2">Carrera</a>
+					</div>
+				  </li>
+				  <li aria-current="page">
+					<div class="flex items-center">
+					  <svg class="rtl:rotate-180 w-1.5 h-1.5 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+						<path stroke="#499ddd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+					  </svg>
+					  <!-- <span class="ms-1 text-[12px]  text-[#0a75ab92] md:ms-2" style="font-weight: bold;">Materías</span> -->
+					</div>
+				  </li>
+				</ol>
+			</nav>
+			 <div style="align-self: end;">
+				<img src="cerrar-sesion.png" class="w-40 "  alt="">
+			</div>  
+			  <style>
+				.text-[#222222]:hover {
+				  background-color: #e0effc;
+				}
+			  </style>
+
+			
+			  
 		</div>
-		<div class="row-fluid">
-			<div id="menuResponsive" class="menuResponsive span2">
-		<div><div id="menuPanel" class="ui-outputpanel ui-widget"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"><script type="text/javascript">if(window.PrimeFaces){}</script>
-	<link rel="stylesheet" type="text/css" href="/public/simca/menu.css">
-	<div class="ui-messages-info ui-corner-all" id="bannerMenuUsuario">
-		<span class="ui-messages-info-detail"><b>Menú de usuario</b></span>
+
+		<div class="mb-6">
+			<img src="estudiante.png" alt="">
+		</div>
+		
+	  
+	
+		<section id="infoGeneral" class="span9 contenidoResponsive">
+		  <div id="j_idt174" class="ui-outputpanel ui-widget">
+			<div
+			  id="j_idt175"
+			  class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable"
+			  role="dialog"
+			  aria-labelledby="j_idt175_title"
+			  aria-hidden="true"
+			  style="width: 600px; height: auto;"
+			>
+			  <div
+				class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"
+			  >
+			 <a
+				  href="#"
+				  class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"
+				  role="button"><span class="ui-icon ui-icon-closethick"></span></a>
+			  </div><div
+				class="ui-dialog-content ui-widget-content"
+				style="height: auto;"
+			  >
+				<div class="ui-messages-error ui-corner-all">
+				  <span class="ui-messages-error-icon"></span>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div>
+			<form
+			  id="botonesSesion"
+			  name="botonesSesion"
+			  method="post"
+			  action="/simca/principal.xhtml"
+			  enctype="application/x-www-form-urlencoded"
+			  style="display: none;"
+			>
+			  <input type="hidden" name="botonesSesion" value="botonesSesion" />
+			  <a
+				id="botonesSesion:cerrarSesion"
+				href="#"
+				class="ui-commandlink ui-widget classBotonCerrarSesion offset10"
+				onclick='PrimeFaces.ab({s:"botonesSesion:cerrarSesion",u:"@all"});return false;'
+			  >
+				Cerrar Sesión
+				<span class="icoCerrar"></span></a
+			  ><a
+				id="botonesSesion:ayuda"
+				href="#"
+				class="ui-commandlink ui-widget classBotonCambiarContrasena offset10"
+				onclick='PrimeFaces.ab({s:"botonesSesion:ayuda",u:"contenidoPrincipalPanel"});return false;'
+			  >
+				Ayuda
+				<span class="icoLlave"></span></a
+			  ><a
+				id="botonesSesion:cambiarContrasena"
+				href="#"
+				class="ui-commandlink ui-widget classBotonCambiarContrasena offset10"
+				onclick='PrimeFaces.ab({s:"botonesSesion:cambiarContrasena",u:"contenidoPrincipalPanel"});return false;'
+			  >
+				Cambiar Contraseña
+				<span class="icoLlave"></span></a
+			  ><input
+				type="hidden"
+				name="javax.faces.ViewState"
+				id="javax.faces.ViewState"
+				value="-182752667817866983:-2311355016609886998"
+				autocomplete="off"
+			  />
+			</form>
+			<div class="clear"></div>
+		  </div><div id="contenidoPrincipalPanel" class="ui-outputpanel ui-widget">
+			<!--?xml version='1.0' encoding='UTF-8' ?-->
+			<link
+			  type="text/css"
+			  rel="stylesheet"
+			  href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"
+			/><link
+			  type="text/css"
+			  rel="stylesheet"
+			  href="/simca/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&v=5.3"
+			/><script
+			  type="text/javascript"
+			  src="/simca/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&v=5.3"
+			></script><script
+			  type="text/javascript"
+			  src="/simca/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&v=5.3"
+			></script><script
+			  type="text/javascript"
+			  src="/simca/javax.faces.resource/primefaces.js.xhtml?ln=primefaces&v=5.3"
+			></script><script
+			  type="text/javascript"
+			  src="/simca/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml?ln=primefaces&v=5.3"
+			></script><link
+			  type="text/css"
+			  rel="stylesheet"
+			  href="/simca/javax.faces.resource/bootstrap-responsive.css.xhtml?ln=css"
+			/><link
+			  type="text/css"
+			  rel="stylesheet"
+			  href="/simca/javax.faces.resource/bootstrap.css.xhtml?ln=css"
+			/><link
+			  type="text/css"
+			  rel="stylesheet"
+			  href="/simca/javax.faces.resource/application.css.xhtml?ln=css"
+			/><link
+			  type="text/css"
+			  rel="stylesheet"
+			  href="/simca/javax.faces.resource/table-content.css.xhtml?ln=css"
+			/><script type="text/javascript">
+			  if (window.PrimeFaces) {
+			  }
+			</script>
+			<title>SIMCA</title>
+			<div class="mainContainer container-fluid datosContainer">
+			  <div class="row-fluid">
+				<div class="span12">
+				  <div>
+					<div class="imagenUsuario">
+					  <img
+						src="https://eos.unicauca.edu.co/fotos-estudiantes-output/379d437bfab67b6b136600e52438f6b5e399fd1d.jpg"
+						onerror="this.onerror=null;this.src='resources/images/img-usuario.png';"
+					  />
+					</div>
+					<div>
+					  <div id="infoUsuario" class="infoUsuario span5">
+						<ul class="listaInfoUsuario">
+						  <div id="j_idt627" class="ui-outputpanel ui-widget">
+							<li class="firstItem">
+							  Programa: Ingeniería de Sistemas
+							</li>
+							<li>ID Pensum: 114</li>
+							<li>Código: 104615013205, Usuario: castell</li>
+							<li>Promedio Carrera: 4.5</li>
+							<li>Promedio Semestre Anterior: 4.2</li>
+							<li class="lastItem">Semestre: 7</li>
+						  </div><div id="j_idt639" class="ui-outputpanel ui-widget">
+							<li class="firstItem">
+							  <b>Política Gratuidad:</b>
+							  Beneficiario - 2024.1
+							</li>
+							<li class="tabGratuidad">
+							  <span style="margin-left: 20px;"></span>Periodos
+							  aprobados: 12
+							</li>
+							<li class="tabGratuidad">
+							  <span style="margin-left: 20px;"></span>Periodos
+							  financiados: 5
+							</li>
+							<li class="lastItem">
+							  <span style="margin-left: 20px;"></span>Periodos a
+							  financiar: 7
+							</li>
+						  </div>
+						</ul>
+					  </div>
+					</div>
+	
+					<div id="infoUsuario2" class="infoUsuario span5">
+					  <ul class="listaInfoUsuario">
+						<div id="j_idt642" class="ui-outputpanel ui-widget">
+						  <li class="firstItem">
+							Nombres: IVAN ESTEBAN CASTILLO SAMBONI
+						  </li>
+						  <li>Identificación: 1080265601</li>
+						  <li>Tipo de identificación: Cédula de ciudadanía</li>
+						  <li>
+							Municipio de expedición del documento: LA ARGENTINA
+						  </li>
+						  <li>Fecha de nacimiento: 1997-01-08</li>
+						  <li class="lastItem">Estado: ACTIVO</li>
+						</div>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="row-fluid">
+				<div class="span12">
+				  <div id="j_idt664"></div><div
+					id="j_idt665"
+					class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"
+					role="dialog"
+					aria-labelledby="j_idt665_title"
+					aria-hidden="true"
+					style="width: auto; height: auto;"
+				  >
+					<div
+					  class="ui-dialog-content ui-widget-content"
+					  style="height: auto;"
+					>
+					  <img
+						id="j_idt666"
+						src="/simca/resources/images/ajax-loader-3.gif?pfdrid_c=true"
+						alt=""
+					  />
+					</div>
+				  </div><div
+					id="contenidoEstudiantePanel"
+					class="ui-outputpanel ui-widget"
+				  >
+					<!--?xml version="1.0" encoding="UTF-8" ?-->
+					<link
+					  type="text/css"
+					  rel="stylesheet"
+					  href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"
+					/><script type="text/javascript">
+					  if (window.PrimeFaces) {
+					  }
+					</script>
+					<script type="text/javascript" src="resources/js/group-rows.js"
+					></script>
+					<script type="text/javascript">
+					  $(document).ready(function () {
+						combinarCeldasColumnaAux("codigoMateria", "idGrupo");
+						combinarCeldasColumnaAux("seccion", "idGrupo");
+						combinarCeldasColumnaAux("materia", "idGrupo");
+						combinarCeldasColumnaAux("docente", "idGrupo");
+						combinarCeldasColumnaAux("repeticion", "idGrupo");
+						combinarCeldasColumnaAux("idGrupo", "idGrupo");
+					  });
+					</script>
+					<title>Materias estudiante</title><div
+					  id="j_idt675"
+					  class="ui-outputpanel ui-widget"
+					>
+					  <div class="ui-messages-info ui-corner-all">
+						<span class="ui-messages-info-icon"></span>
+						<ul>
+						  <li>
+							<!-- <span class="ui-messages-info-detail"
+							  >Usted no tiene materias matriculadas actualmente.</span
+							> -->
+						  </li>
+						</ul>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</section>
 	</div>
-<form id="formMenu" name="formMenu" method="post" action="/simca/principal.xhtml" class="menuUsuario" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="formMenu" value="formMenu">
-<div id="formMenu:estudiantepnl" class="ui-panel ui-widget ui-widget-content ui-corner-all estudianteMenuPanel ui-hidden-container" data-widget="widget_formMenu_estudiantepnl"><div id="formMenu:estudiantepnl_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Estudiante</span>
-				<div class="ui-panel-titlebar-icon ui-corner-all" style="margin-top: 1px;"><span class="ui-icon ui-icon-circle-triangle-s"></span>
-				</div></div><div id="formMenu:estudiantepnl_content" class="ui-panel-content ui-widget-content" style=""><div id="formMenu:j_idt50" class="ui-accordion ui-widget ui-helper-reset ui-hidden-container estudianteAccordion" role="tablist" data-widget="widget_formMenu_j_idt50"><h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all imagen-programa" role="tab" aria-expanded="false" aria-selected="false" tabindex="0"><span class="ui-icon ui-icon-triangle-1-e"></span>Ingeniería de Sistemas</h3><div id="formMenu:j_idt50:0:j_idt51" class="ui-accordion-content ui-helper-reset ui-widget-content ui-helper-hidden" role="tabpanel" aria-hidden="true"></div><h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all imagen-programa" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>Tecnología en Telemática</h3><div id="formMenu:j_idt50:1:j_idt51" class="ui-accordion-content ui-helper-reset ui-widget-content ui-helper-hidden" role="tabpanel" aria-hidden="true"></div><input type="hidden" id="formMenu:j_idt50_active" name="formMenu:j_idt50_active" value="0" autocomplete="off"></div></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-182752667817866983:-2311355016609886998" autocomplete="off">
+	
+  </body>
+</html>
+
+<footer class="interno">
+  <div id="banderaFooter"></div>
+  <p>
+    2024 | División de Tecnologías de la Información y las Comunicaciones <br />
+    <a href="http://www.unicauca.edu.co">Universidad del Cauca</a>
+    | <a href="mailto:simca@unicauca.edu.co">simca@unicauca.edu.co</a>
+  </p>
+</footer>
+<form
+  id="formSelectorMenu"
+  name="formSelectorMenu"
+  method="post"
+  action="/simca/principal.xhtml"
+  enctype="application/x-www-form-urlencoded"
+  style="display:none;"
+>
+  <input type="hidden" name="formSelectorMenu" value="formSelectorMenu" />
+  <input
+    id="formSelectorMenu:cambiarAPerfilEstudiante"
+    type="submit"
+    name="formSelectorMenu:cambiarAPerfilEstudiante"
+    value=""
+    onclick='PrimeFaces.ab({s:this,e:"action",p:"formSelectorMenu:cambiarAPerfilEstudiante",u:"contenidoPrincipalPanel"});;return false'
+  /><input
+    id="formSelectorMenu:cambiarAPerfilDocente"
+    type="submit"
+    name="formSelectorMenu:cambiarAPerfilDocente"
+    value=""
+    onclick='PrimeFaces.ab({s:this,e:"action",p:"formSelectorMenu:cambiarAPerfilDocente",u:"contenidoPrincipalPanel"});;return false'
+  /><input
+    id="formSelectorMenu:cambiarAPerfilAdministrativo"
+    type="submit"
+    name="formSelectorMenu:cambiarAPerfilAdministrativo"
+    value=""
+    onclick='PrimeFaces.ab({s:this,e:"action",p:"formSelectorMenu:cambiarAPerfilAdministrativo",u:"contenidoPrincipalPanel"});;return false'
+  /><input
+    type="hidden"
+    name="javax.faces.ViewState"
+    id="javax.faces.ViewState"
+    value="-182752667817866983:-2311355016609886998"
+    autocomplete="off"
+  />
 </form>
-	<script type="text/javascript" src="resources/js/funcionesMenu.js"></script>
-	<script type="text/javascript">
-		$('.estudianteMenuPanel').children('.ui-panel-titlebar').click(function(){
-			toggleMenuEstudiante();
-		});
-		$('.docenteMenuPanel').children('.ui-panel-titlebar').click(function(){
-			toggleMenuDocente();
-		});
-		$('.docenteMenuPanel').children('.ui-panel-titlebar').children('a').click(function(){
-			return false;
-		});
-		$('.administrativoMenuPanel').children('.ui-panel-titlebar').click(function(){
-			toggleMenuAdministrativo();
-		});
-	</script></div>
-		</div><div id="informacionAccesoPanel" class="ui-outputpanel ui-widget"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"><script type="text/javascript">if(window.PrimeFaces){}</script>
-<form id="j_idt144" name="j_idt144" method="post" action="/simca/principal.xhtml" class="hidden-phone hidden-tablet" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="j_idt144" value="j_idt144">
 
+<script type="text/javascript">
+  var closable = true;
+  function cerrarVentana() {
+    if (!closable) return "Aún no ha cerrado la sesión en SIMCA";
+  }
+  $(document).hover(
+    function () {
+      closable = true;
+    },
+    function () {
+      closable = false;
+      window.onbeforeunload = cerrarVentana;
+    }
+  );
+</script>
 
-		<div id="infoAcceso">
-		<div id="infoAccesoTitulo" onclick="$('#idListaInfoAcceso').toggle('fast');">
-		<p>
-		Información acceso<span class="flechaBlanca"></span>
-		</p>
-		</div>
-		<div class="listaInfoAcceso" id="idListaInfoAcceso" style="display: none; margin-left: 10px;"><label id="j_idt144:j_idt146" class="ui-outputlabel ui-widget">IP: 190.84.88.101</label>
-		<br><label id="j_idt144:j_idt148" class="ui-outputlabel ui-widget">Último acceso:</label><label id="j_idt144:j_idt149" class="ui-outputlabel ui-widget">IP: 190.84.88.101</label>16 de julio de 2024, 10:34 AM
-		</div>
-		</div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-182752667817866983:-2311355016609886998" autocomplete="off">
-</form></div><div id="informacionEdadPanel" class="ui-outputpanel ui-widget"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"><script type="text/javascript">if(window.PrimeFaces){}</script>
-<form id="formInformacionEdad" name="formInformacionEdad" method="post" action="/simca/principal.xhtml" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="formInformacionEdad" value="formInformacionEdad">
-<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-182752667817866983:-2311355016609886998" autocomplete="off">
-</form></div><div id="mensajesInicioPanel" class="ui-outputpanel ui-widget"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"><script type="text/javascript">if(window.PrimeFaces){}</script>
-	<link rel="stylesheet" type="text/css" href="/public/simca/mensajes.css">
-	
-	<section id="comunicados" class="hidden-phone hidden-tablet" style="display: none;">
-		<div class="comunicado" style="display: none;">
-			<div>
-				<div class=" iconoMensaje"></div>
-				<h5></h5>
-				<p></p>
-			</div>
-		</div>
-		<div class="comunicado" style="display: none;">
-			<div>
-				<div class=" iconoMensaje"></div>
-				<h5></h5>
-				<p></p>
-			</div>
-		</div>
-	</section></div>
-			</div>
-
-			<section id="infoGeneral" class="span9 contenidoResponsive"><div id="j_idt174" class="ui-outputpanel ui-widget"><div id="j_idt175" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable" role="dialog" aria-labelledby="j_idt175_title" aria-hidden="true" style="width: 600px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="j_idt175_title" class="ui-dialog-title">Alerta de Labor Docente</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">
-						<div class="ui-messages-error ui-corner-all">
-							<span class="ui-messages-error-icon"></span>
-						</div></div></div></div>
-				<div>
-<form id="botonesSesion" name="botonesSesion" method="post" action="/simca/principal.xhtml" enctype="application/x-www-form-urlencoded" style="display: none;">
-<input type="hidden" name="botonesSesion" value="botonesSesion">
-<a id="botonesSesion:cerrarSesion" href="#" class="ui-commandlink ui-widget classBotonCerrarSesion offset10" onclick="PrimeFaces.ab({s:&quot;botonesSesion:cerrarSesion&quot;,u:&quot;@all&quot;});return false;">
-							Cerrar Sesión
-							<span class="icoCerrar"></span></a><a id="botonesSesion:ayuda" href="#" class="ui-commandlink ui-widget classBotonCambiarContrasena offset10" onclick="PrimeFaces.ab({s:&quot;botonesSesion:ayuda&quot;,u:&quot;contenidoPrincipalPanel&quot;});return false;">
-							Ayuda
-							<span class="icoLlave"></span></a><a id="botonesSesion:cambiarContrasena" href="#" class="ui-commandlink ui-widget classBotonCambiarContrasena offset10" onclick="PrimeFaces.ab({s:&quot;botonesSesion:cambiarContrasena&quot;,u:&quot;contenidoPrincipalPanel&quot;});return false;">
-							Cambiar Contraseña
-							<span class="icoLlave"></span></a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-182752667817866983:-2311355016609886998" autocomplete="off">
-</form>
-					<div class="clear"></div>
-				</div><div id="contenidoPrincipalPanel" class="ui-outputpanel ui-widget"><!--?xml version='1.0' encoding='UTF-8' ?-->
-<link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&amp;v=5.3"><script type="text/javascript" src="/simca/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=5.3"></script><script type="text/javascript" src="/simca/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=5.3"></script><script type="text/javascript" src="/simca/javax.faces.resource/primefaces.js.xhtml?ln=primefaces&amp;v=5.3"></script><script type="text/javascript" src="/simca/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml?ln=primefaces&amp;v=5.3"></script><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/bootstrap-responsive.css.xhtml?ln=css"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/bootstrap.css.xhtml?ln=css"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/application.css.xhtml?ln=css"><link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/table-content.css.xhtml?ln=css"><script type="text/javascript">if(window.PrimeFaces){}</script>
-	<title>SIMCA</title>
-	<div class="mainContainer container-fluid datosContainer">		
-		<div class="row-fluid">
-			<div class="span12">
-	<div>
-		<div class="imagenUsuario">
-			<img src="https://eos.unicauca.edu.co/fotos-estudiantes-output/379d437bfab67b6b136600e52438f6b5e399fd1d.jpg" onerror="this.onerror=null;this.src='resources/images/img-usuario.png';">
-		</div>
-		<div>
-			<div id="infoUsuario" class="infoUsuario span5">
-				<ul class="listaInfoUsuario"><div id="j_idt627" class="ui-outputpanel ui-widget">
-						<li class="firstItem">Programa:
-							Ingeniería de Sistemas</li>
-						<li>ID Pensum:
-							114</li>
-						<li>Código:
-							104615013205,
-							Usuario: castell</li>
-						<li>Promedio Carrera:
-							2.3</li>
-						<li>Promedio Semestre Anterior:
-							3.48</li>
-						<li class="lastItem">Semestre:
-							4</li></div><div id="j_idt639" class="ui-outputpanel ui-widget">
-						<li class="firstItem"><b>Política Gratuidad:</b>
-							Beneficiario -
-							2024.1</li>
-						<li class="tabGratuidad"><span style="margin-left: 20px;"></span>Periodos aprobados:
-							12</li>
-						<li class="tabGratuidad"><span style="margin-left: 20px;"></span>Periodos financiados:
-							5</li>
-						<li class="lastItem"><span style="margin-left: 20px;"></span>Periodos a financiar:
-							7</li></div>
-				</ul>
-			</div>
-		</div>
-
-		<div id="infoUsuario2" class="infoUsuario span5">
-			<ul class="listaInfoUsuario"><div id="j_idt642" class="ui-outputpanel ui-widget">
-					<li class="firstItem">Nombres:
-						IVAN ESTEBAN CASTILLO SAMBONI</li>
-					<li>Identificación:
-						1080265601</li>
-					<li>Tipo de identificación:
-						Cédula de ciudadanía</li>
-					<li>Municipio de expedición del documento:
-						LA ARGENTINA</li>
-					<li>Fecha de nacimiento:
-						1997-01-08</li>
-					<li class="lastItem">Estado: ACTIVO
-					</li></div>
-			</ul>
-		</div>
-
-	</div>
-			</div>
-		</div>
-		<div class="row-fluid">
-			<div class="span12"><div id="j_idt664"></div><div id="j_idt665" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-labelledby="j_idt665_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-content ui-widget-content" style="height: auto;"><img id="j_idt666" src="/simca/resources/images/ajax-loader-3.gif?pfdrid_c=true" alt=""></div></div><div id="contenidoEstudiantePanel" class="ui-outputpanel ui-widget"><!--?xml version="1.0" encoding="UTF-8" ?-->
-<link type="text/css" rel="stylesheet" href="/simca/javax.faces.resource/theme.css.xhtml?ln=primefaces-redmond"><script type="text/javascript">if(window.PrimeFaces){}</script>
-	<script type="text/javascript" src="resources/js/group-rows.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			combinarCeldasColumnaAux('codigoMateria','idGrupo');
-			combinarCeldasColumnaAux('seccion','idGrupo');
-			combinarCeldasColumnaAux('materia','idGrupo');
-			combinarCeldasColumnaAux('docente','idGrupo');
-			combinarCeldasColumnaAux('repeticion','idGrupo');
-			combinarCeldasColumnaAux('idGrupo','idGrupo');
-		});
-	</script>
-	<title>Materias estudiante</title><div id="j_idt675" class="ui-outputpanel ui-widget">
-		<div class="ui-messages-info ui-corner-all">
-			<span class="ui-messages-info-icon"></span>
-			<ul>
-				<li>
-					<span class="ui-messages-info-detail">Usted no tiene materias matriculadas actualmente.</span>
-				</li>
-			</ul>
-		</div></div></div>
-			</div>
-		</div>
-	</div></div>
-				
-
-			</section>
-		</div>
-	</div>
-	
-
-	<footer class="interno">
-		<div id="banderaFooter"></div>
-		<p>2024
-			| División de Tecnologías de la Información y las Comunicaciones <br> <a href="http://www.unicauca.edu.co">Universidad del Cauca</a>
-			| <a href="mailto:simca@unicauca.edu.co">simca@unicauca.edu.co</a>
-		</p>
-	</footer>
-<form id="formSelectorMenu" name="formSelectorMenu" method="post" action="/simca/principal.xhtml" enctype="application/x-www-form-urlencoded" style="display:none;">
-<input type="hidden" name="formSelectorMenu" value="formSelectorMenu">
-<input id="formSelectorMenu:cambiarAPerfilEstudiante" type="submit" name="formSelectorMenu:cambiarAPerfilEstudiante" value="" onclick="PrimeFaces.ab({s:this,e:&quot;action&quot;,p:&quot;formSelectorMenu:cambiarAPerfilEstudiante&quot;,u:&quot;contenidoPrincipalPanel&quot;});;return false"><input id="formSelectorMenu:cambiarAPerfilDocente" type="submit" name="formSelectorMenu:cambiarAPerfilDocente" value="" onclick="PrimeFaces.ab({s:this,e:&quot;action&quot;,p:&quot;formSelectorMenu:cambiarAPerfilDocente&quot;,u:&quot;contenidoPrincipalPanel&quot;});;return false"><input id="formSelectorMenu:cambiarAPerfilAdministrativo" type="submit" name="formSelectorMenu:cambiarAPerfilAdministrativo" value="" onclick="PrimeFaces.ab({s:this,e:&quot;action&quot;,p:&quot;formSelectorMenu:cambiarAPerfilAdministrativo&quot;,u:&quot;contenidoPrincipalPanel&quot;});;return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-182752667817866983:-2311355016609886998" autocomplete="off">
-</form>
-
-	
-	<script type="text/javascript">
-		var closable = true;
-		function cerrarVentana() {
-			if (!closable)
-				return "Aún no ha cerrado la sesión en SIMCA";
-		}
-		$(document).hover(function() {
-			closable = true;
-		}, function() {
-			closable = false;
-			window.onbeforeunload = cerrarVentana;
-		});
-	</script>
-
-	
-
-	
-	<div id="livezilla_tracking" style="display: none"><script async="" type="text/javascript" src="https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&amp;rqst=track&amp;output=jcrpt&amp;intgroup=Y29udGFjdG8_&amp;hg=P0luc2NyaXBjaW9uZXM_&amp;fbpos=10&amp;fbml=0&amp;fbmt=0&amp;fbmr=0&amp;fbmb=0&amp;fbw=31&amp;fbh=112&amp;nse=0.0583058474375826"></script></div>
-	<script type="text/javascript">
-		var script = document.createElement("script");
-		script.async = true;
-		script.type = "text/javascript";
-		var src = "https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&rqst=track&output=jcrpt&intgroup=Y29udGFjdG8_&hg=P0luc2NyaXBjaW9uZXM_&fbpos=10&fbml=0&fbmt=0&fbmr=0&fbmb=0&fbw=31&fbh=112&nse="
-				+ Math.random();
-		setTimeout(
-				"script.src=src;document.getElementById('livezilla_tracking').appendChild(script)",
-				1);
-	</script>
-	<noscript>
-		<img src="https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&amp;rqst=track&amp;output=nojcrpt" width="0" height="0" style="visibility: hidden;" />
-	</noscript>
-	<div style="display: none;">
-		<a href="javascript:lz_tracking_init_floating_button_selector(new Array(true,false,'','',false,true,true,'','','','','','','','&amp;intgroup=Y29udGFjdG8_&amp;hg=P0luc2NyaXBjaW9uZXM_'));" class="lz_fl"><img id="chat_button_image" src="https://chat.unicauca.edu.co/chatsimca/image.php?a=f4f89&amp;id=1&amp;type=overlay&amp;hg=P0luc2NyaXBjaW9uZXM_" width="31" height="112" style="border: 0px;" alt="LiveZilla Live Chat Software"></a>
-	</div>
-<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div id="msgPrincipal_container" class="ui-growl ui-widget" style="z-index: 1001;"></div><div class="ui-dialog-docking-zone"></div><div id="formMenu:j_idt48" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-labelledby="formMenu:j_idt48_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-content ui-widget-content" style="height: auto;"><img id="formMenu:j_idt49" src="/simca/resources/images/ajax-loader-3.gif?pfdrid_c=true" alt=""></div></div><div id="formBreadCrumb:j_idt36_menu" class="ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" role="menu"><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a id="formBreadCrumb:j_idt37" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('formBreadCrumb',{'formBreadCrumb:j_idt37':'formBreadCrumb:j_idt37'}).submit('formBreadCrumb');return false;"><span class="ui-menuitem-icon ui-icon ui-icon-power"></span><span class="ui-menuitem-text">Cerrar Sesión</span></a></li><li class="ui-separator ui-state-default"></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a id="formBreadCrumb:j_idt39" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;formBreadCrumb:j_idt39&quot;,u:&quot;contenidoPrincipalPanel&quot;,f:&quot;formBreadCrumb&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-key"></span><span class="ui-menuitem-text">Cambiar Contraseña</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a id="formBreadCrumb:j_idt40" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.ab({s:&quot;formBreadCrumb:j_idt40&quot;,u:&quot;contenidoPrincipalPanel&quot;,f:&quot;formBreadCrumb&quot;});return false;"><span class="ui-menuitem-icon ui-icon ui-icon-flag"></span><span class="ui-menuitem-text">Ayuda</span></a></li></ul></div><div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div></body></html>
+<div id="livezilla_tracking" style="display: none">
+  <script
+    async=""
+    type="text/javascript"
+    src="https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&rqst=track&output=jcrpt&intgroup=Y29udGFjdG8_&hg=P0luc2NyaXBjaW9uZXM_&fbpos=10&fbml=0&fbmt=0&fbmr=0&fbmb=0&fbw=31&fbh=112&nse=0.0583058474375826"
+  ></script>
+</div>
+<script type="text/javascript">
+  var script = document.createElement("script");
+  script.async = true;
+  script.type = "text/javascript";
+  var src =
+    "https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&rqst=track&output=jcrpt&intgroup=Y29udGFjdG8_&hg=P0luc2NyaXBjaW9uZXM_&fbpos=10&fbml=0&fbmt=0&fbmr=0&fbmb=0&fbw=31&fbh=112&nse=" +
+    Math.random();
+  setTimeout(
+    "script.src=src;document.getElementById('livezilla_tracking').appendChild(script)",
+    1
+  );
+</script>
+<noscript>
+  <img
+    src="https://chat.unicauca.edu.co/chatsimca/server.php?a=97547&rqst=track&output=nojcrpt"
+    width="0"
+    height="0"
+    style="visibility: hidden;"
+  />
+</noscript>
+<div style="display: none;">
+  <a
+    href="javascript:lz_tracking_init_floating_button_selector(new Array(true,false,'','',false,true,true,'','','','','','','','&intgroup=Y29udGFjdG8_&hg=P0luc2NyaXBjaW9uZXM_'));"
+    class="lz_fl"
+    ><img
+      id="chat_button_image"
+      src="https://chat.unicauca.edu.co/chatsimca/image.php?a=f4f89&id=1&type=overlay&hg=P0luc2NyaXBjaW9uZXM_"
+      width="31"
+      height="112"
+      style="border: 0px;"
+      alt="LiveZilla Live Chat Software"
+    /></a
+  >
+</div>
+<div
+  id="textarea_simulator"
+  style="position: absolute; top: 0px; left: 0px; visibility: hidden;"
+>
+</div><div
+  id="msgPrincipal_container"
+  class="ui-growl ui-widget"
+  style="z-index: 1001;"
+>
+</div><div class="ui-dialog-docking-zone"></div><div
+  id="formMenu:j_idt48"
+  class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"
+  role="dialog"
+  aria-labelledby="formMenu:j_idt48_title"
+  aria-hidden="true"
+  style="width: auto; height: auto;"
+>
+  <div class="ui-dialog-content ui-widget-content" style="height: auto;">
+    <img
+      id="formMenu:j_idt49"
+      src="/simca/resources/images/ajax-loader-3.gif?pfdrid_c=true"
+      alt=""
+    />
+  </div>
+</div><div
+  id="formBreadCrumb:j_idt36_menu"
+  class="ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow"
+  role="menu"
+>
+  <ul class="ui-menu-list ui-helper-reset">
+    <li class="ui-menuitem ui-widget ui-corner-all" role="menuitem">
+      <a
+        id="formBreadCrumb:j_idt37"
+        class="ui-menuitem-link ui-corner-all"
+        href="#"
+        onclick="PrimeFaces.addSubmitParam('formBreadCrumb',{'formBreadCrumb:j_idt37':'formBreadCrumb:j_idt37'}).submit('formBreadCrumb');return false;"
+        ><span class="ui-menuitem-icon ui-icon ui-icon-power"></span><span
+          class="ui-menuitem-text">Cerrar Sesión</span
+        ></a>
+    </li><li class="ui-separator ui-state-default"></li><li
+      class="ui-menuitem ui-widget ui-corner-all"
+      role="menuitem"
+    >
+      <a
+        id="formBreadCrumb:j_idt39"
+        class="ui-menuitem-link ui-corner-all"
+        href="#"
+        onclick='PrimeFaces.ab({s:"formBreadCrumb:j_idt39",u:"contenidoPrincipalPanel",f:"formBreadCrumb"});return false;'
+        ><span class="ui-menuitem-icon ui-icon ui-icon-key"></span><span
+          class="ui-menuitem-text">Cambiar Contraseña</span
+        ></a>
+    </li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem">
+      <a
+        id="formBreadCrumb:j_idt40"
+        class="ui-menuitem-link ui-corner-all"
+        href="#"
+        onclick='PrimeFaces.ab({s:"formBreadCrumb:j_idt40",u:"contenidoPrincipalPanel",f:"formBreadCrumb"});return false;'
+        ><span class="ui-menuitem-icon ui-icon ui-icon-flag"></span><span
+          class="ui-menuitem-text">Ayuda</span
+        ></a>
+    </li>
+  </ul>
+</div><div
+  id="textarea_simulator"
+  style="position: absolute; top: 0px; left: 0px; visibility: hidden;"
+>
+</div>
