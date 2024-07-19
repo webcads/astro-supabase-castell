@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import { fileURLToPath } from 'url';
-import vercel from "@astrojs/vercel/serverless";
+// import vercel from "@astrojs/vercel/serverless";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 
